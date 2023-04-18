@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* font-family: 'Roboto', sans-serif; */
+/* color: #131e3a */
+/* color: #fcd812 */
+:root {
+  --darkblue: #131e3a;
+  --yellow: #fcd812;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  color: var(--darkblue);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand img,
+.nav-link img {
+  width: 230.25px;
+  height: 47.4px;
+}
+
+.nav-link {
+  color: var(--darkblue);
+}
+.nav-link:hover {
+  color: #072a83;
+}
+
+.bi-calculator {
+  background-color: var(--darkblue);
+  padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+  border-radius: 50%;
+}
+.navbar-collapse.show {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.bi-x {
+  display: none;
+}
+.navbar-toggler[aria-expanded="true"] {
+  .bi-list {
+    display: none;
+  }
+  .bi-x {
+    display: inline;
+  }
+}
+.bot-links {
+  list-style: none;
+  height: 10vh;
+  bottom: 0;
+  left: 0;
+}
+.bot-links li {
+  height: 5vh;
+}
+.bt-fb {
+  display: block;
+  width: 100vw;
+  background: white;
+}
+.bt-call {
+  display: block;
+  width: 100vw;
+  background: var(--darkblue);
+}
