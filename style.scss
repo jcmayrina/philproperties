@@ -70,3 +70,29 @@
   width: 100vw;
   background: var(--darkblue);
 }
+.fs-6 {
+  font-size: 0.8rem !important;
+}
+footer {
+  background: var(--darkblue);
+}
+.foot-links .nav-link,
+.foot-left-links,
+.foot-right-links,
+.foot-email p,
+.bi-chevron-right,
+.foot-deets a {
+  color: white;
+}
+.foot-links .nav-item:hover {
+  .nav-link,
+  .bi-chevron-right {
+    color: var(--yellow);
+  }
+}
+.foot-logo {
+  filter: invert(1);
+}
+.foot-deets a:hover {
+  color: var(--yellow);
+}
