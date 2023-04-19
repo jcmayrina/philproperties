@@ -34,7 +34,7 @@
 }
 .navbar-collapse.show {
   background-color: white;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
@@ -54,7 +54,7 @@
 .bot-links {
   list-style: none;
   height: 10vh;
-  top: 80vh;
+  top: 90vh;
   left: 0;
 }
 .bot-links li {
