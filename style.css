@@ -57,7 +57,7 @@
 .bot-links {
   list-style: none;
   height: 10vh;
-  bottom: 0;
+  top: 90vh;
   left: 0;
 }
 
