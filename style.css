@@ -14,6 +14,19 @@
   padding: 0;
 }
 
+body {
+  min-height: 100vh;
+  min-height: -moz-available;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -moz-available;
+  height: fill-available;
+  height: -webkit-fill-available;
+}
+
 .navbar-brand img,
 .nav-link img {
   width: 230.25px;
@@ -39,6 +52,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
   height: 100vh;
   width: 100vw;
 }
