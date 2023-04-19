@@ -52,9 +52,11 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  height: 100vh;
   width: 100vw;
+  min-height: 100vh; /* fall-back */
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
 }
 
 .bi-x {
