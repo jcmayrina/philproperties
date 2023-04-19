@@ -14,20 +14,6 @@
   padding: 0;
 }
 
-body {
-  min-height: 100vh; /* fall-back */
-  min-height: -moz-available;
-  min-height: -webkit-fill-available;
-  min-height: fill-available;
-}
-
-html {
-  min-height: 100vh; /* fall-back */
-  min-height: -moz-available;
-  min-height: -webkit-fill-available;
-  min-height: fill-available;
-}
-
 .navbar-brand img,
 .nav-link img {
   width: 230.25px;
@@ -53,11 +39,8 @@ html {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100dvh;
   width: 100vw;
-  min-height: 100vh; /* fall-back */
-  min-height: -moz-available;
-  min-height: -webkit-fill-available;
-  min-height: fill-available;
 }
 
 .bi-x {
@@ -73,13 +56,13 @@ html {
 
 .bot-links {
   list-style: none;
-  height: 10vh;
-  top: 90vh;
+  height: 10dvh;
+  top: 90dvh;
   left: 0;
 }
 
 .bot-links li {
-  height: 5vh;
+  height: 5dvh;
 }
 
 .bt-fb {
