@@ -14,13 +14,16 @@
   padding: 0;
 }
 body {
-  min-height: 100vh;
-  min-height: fill-available;
+  min-height: 100vh; /* fall-back */
+  min-height: -moz-available;
   min-height: -webkit-fill-available;
+  min-height: fill-available;
 }
 html {
-  height: fill-available;
-  height: -webkit-fill-available;
+  min-height: 100vh; /* fall-back */
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
 }
 .navbar-brand img,
 .nav-link img {
