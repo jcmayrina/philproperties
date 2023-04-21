@@ -39,6 +39,7 @@
   left: 0;
   height: 100dvh;
   width: 100vw;
+  z-index: 999;
 }
 .bi-x {
   display: none;
@@ -69,9 +70,6 @@
   display: block;
   width: 100vw;
   background: var(--darkblue);
-}
-.fs-6 {
-  font-size: 0.8rem !important;
 }
 footer {
   background: var(--darkblue);
