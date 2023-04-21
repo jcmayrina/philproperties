@@ -41,7 +41,7 @@
   left: 0;
   height: 100dvh;
   width: 100vw;
-  z-index: 999;
+  z-index: 998;
 }
 
 .bi-x {
@@ -102,4 +102,82 @@ footer {
 
 .foot-deets a:hover {
   color: var(--yellow);
+}
+
+.search-cont {
+  background-image: url(./images/banner1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.search-overlay {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.search-overlay .title {
+  text-shadow: 0 0 4px black;
+}
+
+.btn-rent,
+.btn-buy {
+  border-radius: 5px 5px 0 0;
+  background: var(--darkblue);
+  color: white;
+}
+
+.btn-check:checked + .btn {
+  background: white;
+  color: var(--darkblue);
+}
+
+.btn-check + .btn:hover {
+  background: var(--darkblue);
+  color: white;
+}
+
+.btn-buy:hover {
+  background: var(--darkblue);
+  color: white;
+}
+
+.btn-rent:hover {
+  background: white;
+  color: var(--darkblue);
+}
+
+.btn-search {
+  background: var(--darkblue);
+  border-radius: 0 5px 5px 0;
+}
+.btn-search .bi-search {
+  color: white;
+}
+
+.btn-search:hover {
+  background: #19284d;
+}
+
+.btn-loc {
+  border-radius: 0 0 0 5px;
+}
+
+.btn-loc:hover {
+  background: var(--darkblue);
+}
+.btn-loc:hover .bi-geo-alt-fill {
+  color: white;
+}
+
+.dropdown-toggle:hover {
+  color: #131e3a;
+}
+
+.inp-type {
+  width: 160px;
+}
+
+.search-cont-bar {
+  border-radius: 0 0 0 5px;
 }/*# sourceMappingURL=style.css.map */
