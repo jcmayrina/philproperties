@@ -20,11 +20,11 @@
   height: 47.4px;
 }
 
-.nav-link {
+.navbar .nav-link {
   color: var(--darkblue);
 }
 
-.nav-link:hover {
+.navbar .nav-link:hover {
   color: #072a83;
 }
 
