@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
 
@@ -83,7 +83,11 @@
             <a class="nav-link" href="#">Contact Us</a>
           </li>
           <li class="nav-item mx-3 d-xl-inline d-none">
-            <a class="nav-link" href=""
+            <a
+              class="nav-link"
+              href=""
+              data-bs-toggle="modal"
+              data-bs-target="#modalCalculator"
               ><i
                 class="bi bi-calculator align-items-center"
                 style="font-size: 2rem; color: white"
@@ -142,7 +146,15 @@
               Tools
             </a>
             <ul class="dropdown-menu border-0">
-              <li><a class="dropdown-item" href="#">Loan calculator</a></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalCalculator"
+                  >Loan calculator</a
+                >
+              </li>
               <li><a class="dropdown-item" href="#">Loan Requirements</a></li>
               <li><a class="dropdown-item" href="#">Loan Processing</a></li>
               <li>
@@ -209,6 +221,83 @@
             >
           </li>
         </ul>
+      </div>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="modalCalculator"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="modalCalculatorLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalCalculatorLabel">
+                Loan Calculator
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="ps-3 pb-3">
+                <form class="d-flex m-0 border-0 bg-white">
+                  <div class="col-3">
+                    <label for="int-rate ">Interest Rate</label>
+                    <select
+                      class="form-select border-1 p-0 m-0"
+                      name="int-rate"
+                      id="inputGroupSelect01"
+                    >
+                      <option value="any" selected>Any</option>
+                      <option value="commercial">Commercial</option>
+                      <option value="land">Land</option>
+                      <option value="townhouse">Townhouse</option>
+                      <option value="house">House & Lot</option>
+                      <option value="condominium">Condominium</option>
+                    </select>
+                  </div>
+                  <div class="col-3">
+                    <label for="years">Years</label>
+                    <select
+                      class="form-select border-1 p-0 m-0"
+                      name="years"
+                      id="inputGroupSelect01"
+                    >
+                      <option value="any" selected>Any</option>
+                      <option value="commercial">Commercial</option>
+                      <option value="land">Land</option>
+                      <option value="townhouse">Townhouse</option>
+                      <option value="house">House & Lot</option>
+                      <option value="condominium">Condominium</option>
+                    </select>
+                  </div>
+                  <div class="col-3">
+                    <label for="int-rate">Loan Amount</label>
+                    <input
+                      class="form-control p-0 m-0 border-1"
+                      name="loan"
+                      type="text"
+                      placeholder="Search for City, Neighborhood, or Developer"
+                      aria-label="Text input with dropdown button"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <button class="btn border-0 px-3 m-0 fs-6" type="submit">
+                      Compute
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
     <section class="search-cont p-3">
@@ -277,7 +366,106 @@
         </div>
       </div>
     </section>
-    <section class="partners-slider"></section>
+    <section class="partners-slider bg-body-secondary">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-touch="true"
+        data-bs-interval="2000"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item dev-img-con active container-fluid">
+            <div class="dev-con d-inline-flex container-fluid">
+              <img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/17862180323852875966964053242048080676057471770223_0d31baf11f4c1011d4523d1f87260bbb-removebg-preview.png"
+                alt=""
+              /><img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/26769158609142434920287255338554092854217257024005_8ff149a81d0bd45281c0342a4b875910.png"
+                alt=""
+              /><img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/38026348102455810708489870345164461226082825240578_97206be40e08f64d89c8962f8f1d6cd3.png"
+                alt=""
+              /><img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/46477011785503952376389186360015731426199623264635_c82858d570ee059c4f161f22857760ec.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="carousel-item dev-img-con container-fluid">
+            <div class="dev-con d-inline-flex container-fluid">
+              <img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/53165455892016105977317791018976494378139649244907_99fe97d434627df65b09e6c7b020311f.png"
+                alt=""
+              /><img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/71960066872429845167401936333326087382727865935070_74a6840fb18463b76ec9253b2bf080c4-removebg-preview.png"
+                alt=""
+              /><img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/78247099850067424408406755919646001078147283399202_3cb284dd97427dbdd55c7cc611046d98.png"
+                alt=""
+              /><img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/89921372233293229785323833195476046422370970259778_0b33d423c3bb300e9eb17c01d39302ec.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="carousel-item dev-img-con container-fluid">
+            <div class="dev-con d-inline-flex container-fluid">
+              <img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/avida.png"
+                alt=""
+              /><img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/dmci.png"
+                alt=""
+              /><img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/filinvest.png"
+                alt=""
+              /><img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/geostate.png"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="carousel-item dev-img-con container-fluid">
+            <div class="dev-con d-inline-flex container-fluid">
+              <img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/robinsons.png"
+                alt=""
+              /><img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/smdc.png"
+                alt=""
+              /><img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/South-Forbes.svg"
+                alt=""
+              /><img
+                class="col-3 px-1 dev-img container-fluid my-2"
+                src="./images/partners/vistaland.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="latestprop my-3">
+      <div class="fs-5 fw-bolder text-center">Latest Properties For Sale</div>
+    </section>
     <footer>
       <div
         class="foot-links list-inline py-2 px-1 px-lg-5 text-center container-fluid"
