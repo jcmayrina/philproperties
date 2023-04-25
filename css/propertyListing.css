@@ -1,0 +1,337 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+} 
+.font{
+font-size: 14px;
+}
+.fColor{
+    color: #131E3A;
+}
+.color{
+background-color:#131E3A ;
+}
+.altcolor{
+    background-color: #E3EAFD;
+}
+.rightCon{
+    background-color:  #E3EAFD ;
+}
+#rlabel1{
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    border: 2px white solid;
+    width:80px;
+}
+
+#rlabel2{
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    border: 2px white solid;
+    width:80px;
+}
+
+#btnradio1:checked + #rlabel1{
+    color: #131E3A;
+    background-color: white;
+}
+#btnradio2:checked + #rlabel2{
+    color: #131E3A;
+    background-color: white;
+}
+
+.rentBtn{
+    padding: 5px 0;
+    height: 30px;
+    background-color: white;
+    color: #131E3A;
+    font-weight: bold;
+    border: none;
+    width: 75px;
+}
+.rentBtn img{
+    margin-left: 3px;
+    width: 14px;
+}
+a.rentBtn{
+    margin: auto;
+    font-size: 12px;
+}
+.rentBtn:hover{
+    background-color: #131E3A;
+    color: white;
+    border: 2px white solid;
+}
+.rentBtn:hover{
+    background-color: #131E3A;
+    color: white;
+    border: 2px white solid;
+}
+.property{
+    accent-color: #FFC107;
+    margin-right: .5em;
+    width: 10px;
+}
+.properties label{
+    color: white;
+}
+.info{
+    font-size: 1em;
+}
+.emailBtn{
+    background-color: #E3EAFD;
+}
+.emailBtn:hover{
+    background-color: #131E3A;
+    border: 1px #E3EAFD solid;
+}
+
+.infoCard{
+    background-color: #E3EAFD;
+    color: #131E3A;
+    padding: 1em;
+    height: 80px;
+}
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+}
+.contactInfo > p{
+    font-size:10px;
+    margin:0;
+}
+.cardBtn{
+    background-color: #131E3A;
+    color: white;
+    font-weight: bold;
+    font-size:  14px;
+    border: none;
+    width: 100%;
+}
+.btnImg{
+    width: 14px;
+    filter: invert(99%) sepia(0%) saturate(7500%) hue-rotate(220deg) brightness(104%) contrast(101%);
+    margin-right: 10px;
+}
+.dDown{
+min-width: 60vw;
+}
+.mFilterBtn{
+    border: 2px #131E3A solid;
+    width: 100%;
+}
+.mFilterBtn img{
+    width: 16px;
+}
+.mSortBtn{
+    width: 100%;
+    height: 100%;
+    background-color: #131E3A;
+    color: white;
+}
+.mFilterHeader{
+background-color:#E3EAFD;
+
+}
+.amenhead{
+    font-size: 12px;
+    margin-top:3px
+}
+.ameneties{
+    margin-bottom: 10px;
+}
+
+.ameneties > div:not(div:last-of-type){
+    padding-right: 5px;
+    border-right: 1px gray solid;
+}
+
+.mCardAddress{
+    margin-top: 3px;
+    font-size: 12px;
+}
+.mCardAddress small{
+    margin-top: 3px;
+    font-size: 12px;
+}
+.mCardAddress img{
+    width: 16px;
+    height: 16px;
+}
+
+.plus{
+    width: 14px;
+    filter: invert(99%) sepia(0%) saturate(7500%) hue-rotate(220deg) brightness(104%) contrast(101%);
+}
+.compareBtn{
+    background-color: #131E3A;
+    color: white;
+    font-weight: bolder;
+    margin-left:auto;
+    max-width: 100%;
+}
+.page a{
+    color: #131E3A;
+    border-radius: 50px !important;
+}
+.page a:hover{
+    background-color: #131E3A;
+    color: white;
+    border-radius: 50px !important;
+}
+.page a:focus{
+    box-shadow: none;
+    background-color: #131E3A;
+    color: white;
+}
+.page-link{
+    border: none;
+}
+.list li{
+    font-size: 12px;
+}
+.arrowImg{
+    float: right;
+   
+}
+.title{
+    margin: 0;
+}
+.description{
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.price{
+    margin-bottom: 5px;
+}
+.cardImg{
+    height: 100%;
+    object-fit: cover;
+}
+.filterText{
+    color: white;
+}
+
+.help_con{
+    padding: 40px 10px;
+    color: white;
+    background: linear-gradient(to top, #131e3ad0, #131e3ad0), url(/img/banner2.jpg) no-repeat center;
+    background-size: cover;
+}
+.help_con button{
+    background-color: white;
+    font-weight: bolder;
+    color: #131E3A;
+    border: none;
+}
+
+.infoIcons{
+    width: 50px;
+}
+
+
+@media (max-width: 1199px) and (min-width: 992px){
+    .background{
+        background-color: white;
+    }
+    .card{
+        width: 18rem; 
+        height: 250px;
+    }
+    .properties label{
+        font-size: 14px;
+        color: white;
+    }
+    
+    .card-img-top{
+        object-fit: cover;
+        height: 60%;
+        object-position: 50% 10%;
+    }
+
+    .card-body{
+        padding:5px;
+    }
+    .card-title{
+        font-size: 14px;
+    }
+    .amenhead{
+        font-size: 10px;
+        padding:0px;
+        
+    }
+    .amIcons{
+        width: 14px;
+    }
+    .ameneties{
+        justify-content: start;
+        margin: 0;
+    }
+    .ameneties span{
+        font-size: 10px;
+    }
+    .compareBtn{
+        background-color: #131E3A;
+        color: white;
+        font-weight: bolder;
+        font-size: 12px;
+        width: 80px;
+        height: 30px;
+    }
+    .mCardAddress{
+        margin: 0;
+    }
+    .mCardAddress small{
+        font-size: 10px;
+    }
+    .mCardAddress img{
+        width: 16px;
+        height: 16px;
+    }
+
+}
+@media (max-width: 800px){
+    .background{
+        background-color: white;
+    }
+    .compareBtn{
+        background-color: #131E3A;
+        color: white;
+        font-weight: bolder;
+        font-size: 12px;
+        width: 80px;
+        height: 30px;
+    }
+    .iconText{
+        font-size: 12px;
+    }
+}
+@media (max-width: 450px){
+    .background{
+        background-color: white;
+    }
+    .card{
+        margin-bottom: 30px;
+    }
+    .ameneties span{
+        font-size: 12px;
+    }
+    .amIcons{
+        width: 12px;
+    }
+    .compareBtn{
+        background-color: #131E3A;
+        color: white;
+        font-weight: bolder;
+        font-size: 12px;
+        margin-left: auto;
+    }
+}

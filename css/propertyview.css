@@ -1,0 +1,144 @@
+:root{
+    --darkblue: #131e3a;
+}
+
+.caption{
+    background-color: rgba(0, 0, 0, 0.699);
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 20px 0;
+}
+.carouselBtn{
+    background-color: rgba(0, 0, 0, 0.945);
+    height: 80px;
+    top: 60px;
+}
+
+.propertyTitle{
+    color: white;
+    background-color: var(--darkblue);
+    padding: 80px 20px 20px 20px;
+}
+.propertyDetails{
+    font-size: 20px;
+    padding: 20px;
+}
+.bullets ul{
+padding: 0;
+}
+
+.bullets li{
+    align-items: start;
+    list-style-type: none;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.boxImg{
+    width: 80px;
+    height: 80px;
+}
+.box p{
+    margin: 0;
+    text-align: center;
+}
+
+.propertyDescription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.propertyDescription h3{
+    color: var(--darkblue);
+}
+.propertyDescription p{
+    padding: 0 20px 20px 20px;
+    text-align: justify;
+}
+
+.calculator h1{
+    color: #131e3a;
+}
+.calculator form{
+    margin: 20px;
+}
+.calBtn{
+    color: white;
+    background-color: #131e3a;
+    font-weight: bold;
+}
+
+.calculator small{
+    padding: 0 40px;
+    padding-bottom: 100px;
+}
+hr{
+    margin: auto;
+    width: 80vw;
+}
+.inquire{
+    padding: 20px;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.profile p{
+margin: 0;
+}
+.profile img{
+    width: 150px;
+}
+.inquire input, .inquire textarea{
+    border: 1px #131e3a solid
+}
+input[type="date"]{
+    width: 100%;
+    margin-bottom: 10px;
+   
+}
+
+.messageBtn{
+    background-color: #131e3a;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+.messageBtn:hover{
+    background-color: white;
+    color: #131e3a;
+    
+}
+.similar{
+    gap: 20px;
+}
+.similar p{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+
+@media (min-width:992px){
+.propertyTitle{
+    color: white;
+    background-color: var(--darkblue);
+    padding: 20px 50px 80px 50px;
+}
+.carCon{
+    height: 500px;
+}
+}
