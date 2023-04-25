@@ -229,12 +229,20 @@ a.rentBtn {
     url(../images/banner2.jpg) no-repeat center;
   background-size: cover;
 }
+
 .help_con button {
   background-color: white;
   font-weight: bolder;
   color: #131e3a;
   border: none;
 }
+.help_con button:hover, .help_con button:active {
+  background-color: #131e3a;
+  font-weight: bolder;
+  color: white;
+  border: none;
+}
+
 
 .infoIcons {
   width: 50px;
