@@ -5,6 +5,7 @@
 :root {
   --darkblue: #131e3a;
   --yellow: #fcd812;
+  --white: #ffffff;
 }
 
 * {
@@ -203,4 +204,46 @@ footer {
   height: 50px;
   align-content: center;
   flex-wrap: wrap;
+}
+
+.btn-light {
+  background: var(--white);
+  color: var(--darkblue);
+}
+
+.btn-light:hover {
+  background-color: var(--yellow);
+}
+
+.partner-bg {
+  background: linear-gradient(104deg, var(--darkblue) 55%, var(--white) 86%);
+  background-size: auto;
+  background-position: top right;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+  .partner-bg {
+    background: var(--darkblue);
+  }
+}
+.partners-page-header h1 {
+  color: var(--white);
+}
+
+#title-line {
+  height: 10px;
+  width: 135px;
+  border-width: 0;
+  background-color: #ff0000;
+  position: relative;
+  margin: auto;
+}
+
+.partner-banner {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */

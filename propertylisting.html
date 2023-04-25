@@ -1,767 +1,858 @@
-<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Property Listing</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Philproperties International Inc.</title>
     <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
-      />
-    
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/propertyListing.css">
-    
-
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/propertyListing.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
+
   <body>
-    <!--navigation-->
     <nav class="navbar navbar-expand-xl m-0 p-0 shadow-lg">
-        <a class="navbar-brand d-xl-none d-inline ps-3" href="#"
-          ><img src="./images/philproperties-logo.png" alt="logo"
-        /></a>
-        <button
-          class="navbar-toggler border-0 pe-3"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#main-nav"
-          aria-controls="main-nav"
-          aria-expanded="false"
-          aria-label="Toggle Navigation"
+      <a class="navbar-brand d-xl-none d-inline ps-3" href="#"
+        ><img src="./images/philproperties-logo.png" alt="logo"
+      /></a>
+      <button
+        class="navbar-toggler border-0 pe-3"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#main-nav"
+        aria-controls="main-nav"
+        aria-expanded="false"
+        aria-label="Toggle Navigation"
+      >
+        <i
+          class="bi bi-list"
+          style="font-size: 2.5rem; color: var(--darkblue)"
+        ></i>
+        <i
+          class="bi bi-x"
+          style="
+            font-size: 2.5rem;
+            color: white;
+            z-index: 999;
+            position: fixed;
+            top: 2dvh;
+            right: 2dvh;
+            background-color: var(--darkblue);
+            border-radius: 50%;
+          "
+        ></i>
+      </button>
+      <div
+        class="collapse navbar-collapse align-items-baseline justify-content-around text-start text-xl-center row p-0 m-0 top-0"
+        id="main-nav"
+      >
+        <ul
+          class="navbar-nav align-items-baseline align-items-xl-center fw-medium col justify-content-center"
         >
-          <i
-            class="bi bi-list"
-            style="font-size: 2.5rem; color: var(--darkblue)"
-          ></i>
-          <i
-            class="bi bi-x"
-            style="
-              font-size: 2.5rem;
-              color: white;
-              z-index: 999;
-              position: fixed;
-              top: 2dvh;
-              right: 2dvh;
-              background-color: var(--darkblue);
-              border-radius: 50%;
-            "
-          ></i>
-        </button>
-        <div
-          class="collapse navbar-collapse align-items-baseline justify-content-around text-start text-xl-center row p-0 m-0 top-0"
-          id="main-nav"
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link" href="#"></a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link" href="#">For Sale</a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link" href="#">For Rent</a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link" href="#">Sell Your Property</a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link d-xl-inline d-none" href="#"
+              ><img src="./images/philproperties-logo.png" alt="logo"
+            /></a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link" href="#">Be Our Agent</a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a
+              class="nav-link"
+              href=""
+              data-bs-toggle="modal"
+              data-bs-target="#modalCalculator"
+              ><i
+                class="bi bi-calculator align-items-center"
+                style="font-size: 2rem; color: white"
+              ></i
+            ></a>
+          </li>
+          <li class="nav-item dropdown d-xl-none d-inline ms-5 mt-5">
+            <a
+              class="nav-link dropdown-toggle fs-4"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Links
+            </a>
+            <ul class="dropdown-menu border-0">
+              <li><a class="dropdown-item" href="#">Home</a></li>
+              <li><a class="dropdown-item" href="#">Videos</a></li>
+              <li><a class="dropdown-item" href="#">Join Us</a></li>
+              <li><a class="dropdown-item" href="#">Partners</a></li>
+              <li><a class="dropdown-item" href="#">Careers</a></li>
+              <li><a class="dropdown-item" href="#">About Us</a></li>
+              <li><a class="dropdown-item" href="#">Contact Us</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown d-xl-none d-inline ms-5">
+            <a
+              class="nav-link dropdown-toggle fs-4"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Properties
+            </a>
+            <ul class="dropdown-menu border-0">
+              <li><a class="dropdown-item" href="#">For Sale</a></li>
+              <li><a class="dropdown-item" href="#">For Rent</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Sell Your Property</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Buyer Information Form</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown d-xl-none d-inline ms-5">
+            <a
+              class="nav-link dropdown-toggle fs-4"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Tools
+            </a>
+            <ul class="dropdown-menu border-0">
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalCalculator"
+                  >Loan calculator</a
+                >
+              </li>
+              <li><a class="dropdown-item" href="#">Loan Requirements</a></li>
+              <li><a class="dropdown-item" href="#">Loan Processing</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Account Login</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="mapembed d-xl-none d-lg-inline d-none col">
+          <li class="nav-link">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.1730196542785!2d121.05801057581287!3d14.589214877353928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c94ff2bca9b7%3A0xf3ba9eb2aff1b683!2sPhilproperties!5e0!3m2!1sen!2sph!4v1681793039262!5m2!1sen!2sph"
+              width="700"
+              style="border: 0; height: 90dvh; top: 0; right: 0"
+              class="position-absolute"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </li>
+        </ul>
+        <ul class="mapembed d-lg-none d-inline col p-0">
+          <li class="nav-link">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.1730196542785!2d121.05801057581287!3d14.589214877353928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c94ff2bca9b7%3A0xf3ba9eb2aff1b683!2sPhilproperties!5e0!3m2!1sen!2sph!4v1681793039262!5m2!1sen!2sph"
+              height="150"
+              style="
+                border: 0;
+                width: 100vw;
+                bottom: 10dvh;
+                left: 0;
+                position: absolute;
+              "
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </li>
+        </ul>
+        <ul
+          class="bot-links d-xl-none d-block col-12 position-absolute text-center p-0 m-0"
         >
-          <ul
-            class="navbar-nav align-items-baseline align-items-xl-center fw-medium col justify-content-center"
+          <li
+            class="bt-fb m-0 p-0 shadow-lg d-flex justify-content-center align-items-center"
           >
-            <li class="nav-item mx-3 d-xl-inline d-none">
-              <a class="nav-link" href="#"></a>
-            </li>
-            <li class="nav-item mx-3 d-xl-inline d-none">
-              <a class="nav-link" href="#">For Sale</a>
-            </li>
-            <li class="nav-item mx-3 d-xl-inline d-none">
-              <a class="nav-link" href="#">For Rent</a>
-            </li>
-            <li class="nav-item mx-3 d-xl-inline d-none">
-              <a class="nav-link" href="#">Sell Your Property</a>
-            </li>
-            <li class="nav-item mx-3 d-xl-inline d-none">
-              <a class="nav-link d-xl-inline d-none" href="#"
-                ><img src="./images/philproperties-logo.png" alt="logo"
-              /></a>
-            </li>
-            <li class="nav-item mx-3 d-xl-inline d-none">
-              <a class="nav-link" href="#">Be Our Agent</a>
-            </li>
-            <li class="nav-item mx-3 d-xl-inline d-none">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item mx-3 d-xl-inline d-none">
-              <a class="nav-link" href="#">Contact Us</a>
-            </li>
-            <li class="nav-item mx-3 d-xl-inline d-none">
-              <a class="nav-link" href=""
-                ><i
-                  class="bi bi-calculator align-items-center"
-                  style="font-size: 2rem; color: white"
-                ></i
-              ></a>
-            </li>
-            <li class="nav-item dropdown d-xl-none d-inline ms-5 mt-5">
-              <a
-                class="nav-link dropdown-toggle fs-4"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Links
-              </a>
-              <ul class="dropdown-menu border-0">
-                <li><a class="dropdown-item" href="#">Home</a></li>
-                <li><a class="dropdown-item" href="#">Videos</a></li>
-                <li><a class="dropdown-item" href="#">Join Us</a></li>
-                <li><a class="dropdown-item" href="#">Partners</a></li>
-                <li><a class="dropdown-item" href="#">Careers</a></li>
-                <li><a class="dropdown-item" href="#">About Us</a></li>
-                <li><a class="dropdown-item" href="#">Contact Us</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown d-xl-none d-inline ms-5">
-              <a
-                class="nav-link dropdown-toggle fs-4"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Properties
-              </a>
-              <ul class="dropdown-menu border-0">
-                <li><a class="dropdown-item" href="#">For Sale</a></li>
-                <li><a class="dropdown-item" href="#">For Rent</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Sell Your Property</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Buyer Information Form</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown d-xl-none d-inline ms-5">
-              <a
-                class="nav-link dropdown-toggle fs-4"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Tools
-              </a>
-              <ul class="dropdown-menu border-0">
-                <li><a class="dropdown-item" href="#">Loan calculator</a></li>
-                <li><a class="dropdown-item" href="#">Loan Requirements</a></li>
-                <li><a class="dropdown-item" href="#">Loan Processing</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Account Login</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="mapembed d-xl-none d-lg-inline d-none col">
-            <li class="nav-link">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.1730196542785!2d121.05801057581287!3d14.589214877353928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c94ff2bca9b7%3A0xf3ba9eb2aff1b683!2sPhilproperties!5e0!3m2!1sen!2sph!4v1681793039262!5m2!1sen!2sph"
-                width="700"
-                style="border: 0; height: 90dvh; top: 0; right: 0"
-                class="position-absolute"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </li>
-          </ul>
-          <ul class="mapembed d-lg-none d-inline col p-0">
-            <li class="nav-link">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.1730196542785!2d121.05801057581287!3d14.589214877353928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c94ff2bca9b7%3A0xf3ba9eb2aff1b683!2sPhilproperties!5e0!3m2!1sen!2sph!4v1681793039262!5m2!1sen!2sph"
-                height="150"
-                style="
-                  border: 0;
-                  width: 100vw;
-                  bottom: 10dvh;
-                  left: 0;
-                  position: absolute;
-                "
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </li>
-          </ul>
-          <ul
-            class="bot-links d-xl-none d-block col-12 position-absolute text-center p-0 m-0"
+            <a
+              href="#"
+              class="nav-link flex-wrap d-flex align-items-center justify-content-center"
+              ><i class="bi bi-facebook px-2" style="font-size: 1.5rem"></i
+              >Follow us on Facebook</a
+            >
+          </li>
+          <li
+            class="bt-call m-0 p-0 d-flex justify-content-center align-items-center"
           >
-            <li
-              class="bt-fb m-0 p-0 shadow-lg d-flex justify-content-center align-items-center"
+            <a
+              href="#"
+              class="nav-link flex-wrap d-flex align-items-center justify-content-center text-white"
+              ><i
+                class="bi bi-telephone px-2"
+                style="font-size: 1.5rem; color: white"
+              ></i
+              >(02) 7211 2274</a
             >
-              <a
-                href="#"
-                class="nav-link flex-wrap d-flex align-items-center justify-content-center"
-                ><i class="bi bi-facebook px-2" style="font-size: 1.5rem"></i
-                >Follow us on Facebook</a
-              >
-            </li>
-            <li
-              class="bt-call m-0 p-0 d-flex justify-content-center align-items-center"
-            >
-              <a
-                href="#"
-                class="nav-link flex-wrap d-flex align-items-center justify-content-center text-white"
-                ><i
-                  class="bi bi-telephone px-2"
-                  style="font-size: 1.5rem; color: white"
-                ></i
-                >(02) 7211 2274</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-      
-      <!--main-->
-    <section class="py-md-5">
-      <div class="container-xl">
-        <div class="row justify-content-center">
-          <!-- FILTERS -->
-          <!-- desktopfilter -->
-          <div class="col-3 align-items-center d-none d-lg-block rounded-start-3 color filterCon me-4">
-            <div class="sticky-top text-white px-1 py-4  " >
-              <p class="fw-bold text-lg-center filterText">FILTER YOUR RESULTS</p>
-              <form>
-                <div class="mb-3">
-                  <input type="text" class="form-control form-control-sm rounded-pill" placeholder="Keyword or Place" aria-describedby="keyword or place">
-                </div>
-
-                <div class="mb-3 d-flex justify-content-between">
-                  <div class="btn-group btn-group-sm"  role="group" aria-label="Basic radio toggle button group">
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                    <label class="btn rounded-start-pill " id="rlabel1" for="btnradio1">For Sale</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                    <label class="btn rounded-end-pill" id="rlabel2" for="btnradio2">Forclosure</label>
-                  </div>
-                    <a class="btn btn-sm rentBtn rounded-pill ms-2" href="#" role="button">Rent<img src="/img/link-external.svg"></a>
-                </div>
-                <div class="mb-3">
-                  
-                  <p class="mb-1 filterText">Price</p>
-                  <div class="row align-items-center fw-bold fs-3">
-                    <div class="col">
-                      <input type="text" class="form-control form-control-sm rounded-2 text-center" placeholder="Minimum" aria-describedby="minimum">
-                    </div>
-                    -
-                    <div class="col">
-                      <input type="text" class="form-control form-control-sm rounded-2 text-center" placeholder="Maximum" aria-describedby="Maximum">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mb-3 ">
-                  <p class="filterText">Property Type</p>
-                  <div class="row g-0 row-cols-2 ">
-                    <div class="col properties">
-                      <div class="d-flex align-items-center">
-                        <input type="radio" class="property" id="any" name="property" value="any">
-                        <label for="any">Any</label>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <input type="radio" class="property" id="commercial" name="property" value="commercial">
-                        <label for="commercial">Commercial</label>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <input type="radio" class="property" id="land" name="property" value="land">
-                      <label for="land">Land</label>
-                      </div>
-                    </div>
-
-                    <div class="col properties">
-                      <div class="d-flex align-items-center">
-                        <input type="radio" class="property" id="townhouse" name="property" value="townhouse">
-                        <label for="townhouse">Townhouse</label>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <input type="radio" class="property" id="house and lot" name="property" value="house and lot">
-                        <label for="house and lot">House and  Lot</label>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <input type="radio" class="property" id="condominium" name="property" value="condominium">
-                      <label for="condominium">Condominium</label>
-                      </div>  
-                    </div>
-                </div>
-              </div>
-
-              
-                <div class="d-flex">
-                    <input class="btn btn-warning w-100 fw-bold mb-3" style="font-size:14px;" type="submit" value="APPLY FILTER">
-                </div>
-              
-            </form>
-              <div class="d-flex flex-column align-items-center info d-none d-xl-block">
-                
-                  <p class="text-center filterText">Connect with us</p>
-                  <form class="d-flex flex-column mb-3 w-100"id="emailform" action="">
-                    <input type="email" class=" form-control form-control rounded-5 mb-2" name="email" id="email" placeholder="Your Email">
-                    <button class="btn btn-sm rounded-pill w-50 emailBtn" type='submit' for='emailform'>Submit</button> 
-                  </form>
-             
-                <div class="contact">
-                  <p class="text-center filterText">You may contact us thru</p>
-                  <div class=" rounded-2 mb-3 infoCard">
-                    <div class="row g-0">
-                      <div class="col-4">
-                        <img class="infoIcons"src="/img/mappin.png" alt="">
-                      </div>
-                      <div class="col contactInfo "><p>Suite 932 Mega Plaza Bldg. ADB Avenue, Ortigas Center Pasig City</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="  rounded-2 mb-3 infoCard">
-                    <div class="row g-0">
-                      <div class="col-4">
-                        <img class="infoIcons" src="img/facebook-logo-240.png" alt="">
-                      </div>
-                      <div class="col contactInfo">
-                        <p>OFFICE: +02 7211 2774</p>
-                        <p>Sun: +63 917 119 8992</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class=" rounded-2 mb-3 infoCard">
-                    <div class="row g-0">
-                      <div class="col-4">
-                        <img class="infoIcons"src="/img/link-regular-240.png" alt="">
-                      </div>
-                      <div class="col contactInfo">
-                        <p>info@philproperties.ph</p>
-                        <p>fb.com/PhilProperties.ph</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="modalCalculator"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="modalCalculatorLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalCalculatorLabel">
+                Loan Calculator
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
-          </div>
-          <!-- mobilefilter -->
-          <div class="my-3 container d-lg-none">
-            <form id="filterForm" action="">
-              <div class="row">
-                <div class="col-6">
-                  <div class="input-group">
-                    <span class="input-group-text" id="basic-addon1"><img src="/img/Search.svg" alt="search icon"></span>
-                    <input type="text" class="form-control" placeholder="Keyword or Place" aria-label="Username" aria-describedby="basic-addon1">
+            <div class="modal-body">
+              <div class="ps-3 pb-3">
+                <form class="d-flex m-0 border-0 bg-white">
+                  <div class="col-3">
+                    <label for="int-rate ">Interest Rate</label>
+                    <select
+                      class="form-select border-1 p-0 m-0"
+                      name="int-rate"
+                      id="inputGroupSelect01"
+                    >
+                      <option value="any" selected>Any</option>
+                      <option value="commercial">Commercial</option>
+                      <option value="land">Land</option>
+                      <option value="townhouse">Townhouse</option>
+                      <option value="house">House & Lot</option>
+                      <option value="condominium">Condominium</option>
+                    </select>
                   </div>
-                </div>
-                <div class="col-3 p-0">
-                  <div class="dropdown-center">
-                    <button class="btn dropdown-toggle fw-bolder fColor rounded-4 mFilterBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="d-none d-md-inline"><img src="/img/Filter_alt.svg" alt="filter icon"></span> Filter
+                  <div class="col-3">
+                    <label for="years">Years</label>
+                    <select
+                      class="form-select border-1 p-0 m-0"
+                      name="years"
+                      id="inputGroupSelect01"
+                    >
+                      <option value="any" selected>Any</option>
+                      <option value="commercial">Commercial</option>
+                      <option value="land">Land</option>
+                      <option value="townhouse">Townhouse</option>
+                      <option value="house">House & Lot</option>
+                      <option value="condominium">Condominium</option>
+                    </select>
+                  </div>
+                  <div class="col-3">
+                    <label for="int-rate">Loan Amount</label>
+                    <input
+                      class="form-control p-0 m-0 border-1"
+                      name="loan"
+                      type="text"
+                      placeholder="Search for City, Neighborhood, or Developer"
+                      aria-label="Text input with dropdown button"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <button class="btn border-0 px-3 m-0 fs-6" type="submit">
+                      Compute
                     </button>
-                    <ul class=" p-0 m-0 dropdown-menu dDown">
-                      <p class="py-1 px-2 fw-bolder mFilterHeader">FILTER</p>
-                      <div class="m-3">
-                        <li>
-                          <div class=" d-flex flex-column">
-                            
-                            <h1 class="fs-6 fw-bolder ">OFFER TYPE</h1>
-                            <div>
-                              <input type="radio" name="offerType" id="forSale">
-                              <label for="forSale">For Sale</label>
-                            </div>
-                            <div>
-                              <input type="radio" name="offerType" id="forClosure">
-                            <label for="forClosure">Forclosure</label>
-                            </div>
-                            <div>
-                              <input type="radio" name="offerType" id="forRent">
-                              <label for="forRent">For Rent</label>
-                            </div>
-                          </div>
-                        </li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li>
-                          <div class="row">
-                            <h1 class="fs-6 fw-bolder">PRICE</h1>
-                            <div class="col"><input class="form-control form-control-sm" type="text" placeholder="Minimum" aria-label=".form-control-sm example"></div>
-                            <div class="col"><input class="form-control form-control-sm" type="text" placeholder="Maximum" aria-label=".form-control-sm example"></div>
-                          </div>
-                        </li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li>
-                          <div class="d-flex flex-column">
-                            <div>
-                              <p class="fs-6 fw-bolder text-uppercase">Property Type</p>
-                              <input type="radio" name="propType" id="any">
-                              <label for="any">Any</label>
-                            </div>
-                            <div>
-                              <input type="radio" name="propType" id="commercial">
-                              <label for="commercial">Commercial </label>
-                            </div>
-                            <div>
-                              <input type="radio" name="propType" id="land">
-                              <label for="land">Land </label>
-                            </div>
-                            <div>
-                              <input type="radio" name="propType" id="townhouse">
-                              <label for="townhouse">Townhouse </label>
-                            </div>
-                            <div>
-                              <input type="radio" name="propType" id="lot">
-                              <label for="lot">House and Lot </label>
-                            </div>
-                            <div>
-                              <input type="radio" name="propType" id="condo">
-                              <label for="condo">Condominium </label>
-                            </div>
-                          </div>
-                        </li>
-                      </div>
-                    </ul>
                   </div>
-                </div>
-                <div class="col-3"><input class="btn btn-sm rounded-4 mSortBtn" type="submit" for="filterForm" value="Sort"></div>
-              </div>
-          </form>
-          </div>
-        
-          <!-- CARDS -->
-          <div class="col col-lg-7 background rightCon ">
-            <p class="text-center fs-3 d-none d-xl-block pt-5 fColor"><span class="fw-bold">460</span> Properties For Sale in the Philippines</p>
-          <!-- DESKTOP -->
-            <div class="d-none d-xl-block py-4 ">
-              <div class="card mb-3">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="./img/view1.jpg" class="img-fluid rounded-start cardImg " alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title title">Mckinley Hills Village House & Lot</h5>
-                      <small>Mckinley Hills, Pinagsama, Taguig City</small>
-                      <p class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium voluptatibus, cumque sint laudantium accusamus ea quidem esse commodi quos.</p>
-                      <p class="card-text fs-4 price">₱14,000,000</p>
-                      <div class="row">
-                        <div class="col-5 p-0">
-                          <ul class="list m-0">
-                            <li>4 Bathrooms</li>
-                            <li>4 Baths</li>
-                            <li>250sqm Floor Area</li>
-                            <li>150sqm Lot Area</li>
-                          </ul>
-                        </div>
-                        <div class="col d-flex flex-column justify-content-center ps-0">
-                          <button type="button" class="btn rounded-pill text-start mb-2 cardBtn"><img src="/img/info-circle.svg" class="btnImg">View Info <img class="arrowImg" src="/img/Expand_right.svg" alt=""></button>
-                          <button type="button" class="btn rounded-pill text-start cardBtn"><img src="/img/plus-circle.svg" class="btnImg">Compare</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-
-            
-              <div class="card mb-3">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="./img/view1.jpg" class="img-fluid rounded-start cardImg " alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title title">Mckinley Hills Village House & Lot</h5>
-                      <small>Mckinley Hills, Pinagsama, Taguig City</small>
-                      <p class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium voluptatibus, cumque sint laudantium accusamus ea quidem esse commodi quos.</p>
-                      <p class="card-text fs-4 price">₱14,000,000</p>
-                      <div class="row">
-                        <div class="col-5 p-0">
-                          <ul class="list m-0">
-                            <li>4 Bathrooms</li>
-                            <li>4 Baths</li>
-                            <li>250sqm Floor Area</li>
-                            <li>150sqm Lot Area</li>
-                          </ul>
-                        </div>
-                        <div class="col d-flex flex-column justify-content-center ps-0">
-                          <button type="button" class="btn rounded-pill text-start mb-2 cardBtn"><img src="/img/info-circle.svg" class="btnImg">View Info <img class="arrowImg" src="/img/Expand_right.svg" alt=""></button>
-                          <button type="button" class="btn rounded-pill text-start cardBtn"><img src="/img/plus-circle.svg" class="btnImg">Compare</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-              <div class="card mb-3">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="./img/view1.jpg" class="img-fluid rounded-start cardImg " alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title title">Mckinley Hills Village House & Lot</h5>
-                      <small>Mckinley Hills, Pinagsama, Taguig City</small>
-                      <p class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium voluptatibus, cumque sint laudantium accusamus ea quidem esse commodi quos.</p>
-                      <p class="card-text fs-4 price">₱14,000,000</p>
-                      <div class="row">
-                        <div class="col-5 p-0">
-                          <ul class="list m-0">
-                            <li>4 Bathrooms</li>
-                            <li>4 Baths</li>
-                            <li>250sqm Floor Area</li>
-                            <li>150sqm Lot Area</li>
-                          </ul>
-                        </div>
-                        <div class="col d-flex flex-column justify-content-center ps-0">
-                          <button type="button" class="btn rounded-pill text-start mb-2 cardBtn"><img src="/img/info-circle.svg" class="btnImg">View Info <img class="arrowImg" src="/img/Expand_right.svg" alt=""></button>
-                          <button type="button" class="btn rounded-pill text-start cardBtn"><img src="/img/plus-circle.svg" class="btnImg">Compare</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-           
-              <div class="card mb-3">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="./img/view1.jpg" class="img-fluid rounded-start cardImg " alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title title">Mckinley Hills Village House & Lot</h5>
-                      <small>Mckinley Hills, Pinagsama, Taguig City</small>
-                      <p class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium voluptatibus, cumque sint laudantium accusamus ea quidem esse commodi quos.</p>
-                      <p class="card-text fs-4 price">₱14,000,000</p>
-                      <div class="row">
-                        <div class="col-5 p-0">
-                          <ul class="list m-0">
-                            <li>4 Bathrooms</li>
-                            <li>4 Baths</li>
-                            <li>250sqm Floor Area</li>
-                            <li>150sqm Lot Area</li>
-                          </ul>
-                        </div>
-                        <div class="col d-flex flex-column justify-content-center ps-0">
-                          <button type="button" class="btn rounded-pill text-start mb-2 cardBtn"><img src="/img/info-circle.svg" class="btnImg">View Info <img class="arrowImg" src="/img/Expand_right.svg" alt=""></button>
-                          <button type="button" class="btn rounded-pill text-start cardBtn"><img src="/img/plus-circle.svg" class="btnImg">Compare</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-              <div class="card mb-3">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="./img/view1.jpg" class="img-fluid rounded-start cardImg " alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title title">Mckinley Hills Village House & Lot</h5>
-                      <small>Mckinley Hills, Pinagsama, Taguig City</small>
-                      <p class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium voluptatibus, cumque sint laudantium accusamus ea quidem esse commodi quos.</p>
-                      <p class="card-text fs-4 price">₱14,000,000</p>
-                      <div class="row">
-                        <div class="col-5 p-0">
-                          <ul class="list m-0">
-                            <li>4 Bathrooms</li>
-                            <li>4 Baths</li>
-                            <li>250sqm Floor Area</li>
-                            <li>150sqm Lot Area</li>
-                          </ul>
-                        </div>
-                        <div class="col d-flex flex-column justify-content-center ps-0">
-                          <button type="button" class="btn rounded-pill text-start mb-2 cardBtn"><img src="/img/info-circle.svg" class="btnImg">View Info <img class="arrowImg" src="/img/Expand_right.svg" alt=""></button>
-                          <button type="button" class="btn rounded-pill text-start cardBtn"><img src="/img/plus-circle.svg" class="btnImg">Compare</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-              <div class="card mb-3">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="./img/view1.jpg" class="img-fluid rounded-start cardImg " alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title title">Mckinley Hills Village House & Lot</h5>
-                      <small>Mckinley Hills, Pinagsama, Taguig City</small>
-                      <p class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium voluptatibus, cumque sint laudantium accusamus ea quidem esse commodi quos.</p>
-                      <p class="card-text fs-4 price">₱14,000,000</p>
-                      <div class="row">
-                        <div class="col-5 p-0">
-                          <ul class="list m-0">
-                            <li>4 Bathrooms</li>
-                            <li>4 Baths</li>
-                            <li>250sqm Floor Area</li>
-                            <li>150sqm Lot Area</li>
-                          </ul>
-                        </div>
-                        <div class="col d-flex flex-column justify-content-center ps-0">
-                          <button type="button" class="btn rounded-pill text-start mb-2 cardBtn"><img src="/img/info-circle.svg" class="btnImg">View Info <img class="arrowImg" src="/img/Expand_right.svg" alt=""></button>
-                          <button type="button" class="btn rounded-pill text-start cardBtn"><img src="/img/plus-circle.svg" class="btnImg">Compare</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- TABLETMOBILE CARDS -->
-            <div class="row g-md-3 row-cols-md-2 d-xl-none p-0">
-                <div class="col">
-                  <div class="card ">
-                    <img src="/img/view1.jpg" class=" card-img-top" alt="house picture">
-                    <div class="card-body">
-                      <div class="row +">
-                        <div class="col-7"><h6 class="card-title m-0">Mckinley Hills Village House & Lot</h6></div>
-                        <div class="col-5 d-flex justify-content-end"><h6>₱16,000,000</h6></div>
-                      </div>
-                      <h6 class="amenhead fw-bold m-0">AMENETIES</h6>
-                          <div class="ameneties d-flex ">
-                            <div><img src="/img/bed.svg" class="amIcons" alt="bed icon"> <span class="iconText">4</span></div>
-                            <div><img src="/img/bath.svg" class="amIcons  ms-1" alt="bath icon"><span class="iconText" >4</span></div>
-                            <div><img src="/img/area-floor-size-icon.svg" class="amIcons ms-1" width="24" height="24"alt="floor area icon"><span class="iconText">450sqm</span></div>
-                            <div><img src="/img/area.svg" class="amIcons ms-1" alt="lot area icon"><span class="iconText">192sqm</span></div>
-                            <button class="compareBtn rounded-pill"><img src="/img/plus-circle.svg" class="d-md-none plus"> Compare</button>
-                          </div>
-                          <div class="mCardAddress">
-                            <img src="/img/map.svg" alt=""><small>Greenwoods Executive Village, Pinagbuhatan, Pasig City</small>
-                          </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="card" >
-                    <img src="/img/view1.jpg" class=" card-img-top" alt="house picture">
-                    <div class="card-body">
-                      <div class="row gx-0">
-                        <div class="col-7"><h6 class="card-title m-0">Mckinley Hills Village House & Lot</h6></div>
-                        <div class="col-5 d-flex justify-content-end"><h6>₱16,000,000</h6></div>
-                      </div>
-                      <h6 class="amenhead fw-bold m-0">AMENETIES</h6>
-                          <div class="ameneties d-flex ">
-                            <div><img src="/img/bed.svg" class="amIcons" alt="bed icon"> <span class="iconText">4</span></div>
-                            <div><img src="/img/bath.svg" class="amIcons  ms-1" alt="bath icon"><span class="iconText" >4</span></div>
-                            <div><img src="/img/area-floor-size-icon.svg" class="amIcons ms-1" width="24" height="24"alt="floor area icon"><span class="iconText">450sqm</span></div>
-                            <div><img src="/img/area.svg" class="amIcons ms-1" alt="lot area icon"><span class="iconText">192sqm</span></div>
-                            <button class="compareBtn rounded-pill "><img src="/img/plus-circle.svg" class="d-none plus"> Compare</button>
-                          </div>
-                          <div class="mCardAddress">
-                            <img src="/img/map.svg" alt=""><small>Greenwoods Executive Village, Pinagbuhatan, Pasig City</small>
-                          </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="card">
-                    <img src="/img/view1.jpg" class=" card-img-top" alt="house picture">
-                    <div class="card-body">
-                      <div class="row gx-0">
-                        <div class="col-7"><h6 class="card-title m-0">Mckinley Hills Village House & Lot</h6></div>
-                        <div class="col-5 d-flex justify-content-end"><h6>₱16,000,000</h6></div>
-                      </div>
-                      <h6 class="amenhead fw-bold m-0">AMENETIES</h6>
-                          <div class="ameneties d-flex ">
-                            <div><img src="/img/bed.svg" class="amIcons" alt="bed icon"> <span class="iconText">4</span></div>
-                            <div><img src="/img/bath.svg" class="amIcons  ms-1" alt="bath icon"><span class="iconText" >4</span></div>
-                            <div><img src="/img/area-floor-size-icon.svg" class="amIcons ms-1" width="24" height="24"alt="floor area icon"><span class="iconText">450sqm</span></div>
-                            <div><img src="/img/area.svg" class="amIcons ms-1" alt="lot area icon"><span class="iconText">192sqm</span></div>
-                            <button class="compareBtn rounded-pill"><img src="/img/plus-circle.svg" class="d-none plus">Compare</button>
-                          </div>
-                          <div class="mCardAddress">
-                            <img src="/img/map.svg" alt=""><small>Greenwoods Executive Village, Pinagbuhatan, Pasig City</small>
-                          </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="col">
-                  <div class="card">
-                    <img src="/img/view1.jpg" class=" card-img-top" alt="house picture">
-                    <div class="card-body">
-                      <div class="row gx-0">
-                        <div class="col-7"><h6 class="card-title m-0">Mckinley Hills Village House & Lot</h6></div>
-                        <div class="col-5 d-flex justify-content-end"><h6>₱16,000,000</h6></div>
-                      </div>
-                      <h6 class="amenhead fw-bold m-0">AMENETIES</h6>
-                          <div class="ameneties d-flex ">
-                            <div><img src="/img/bed.svg" class="amIcons" alt="bed icon"> <span class="iconText">4</span></div>
-                            <div><img src="/img/bath.svg" class="amIcons  ms-1" alt="bath icon"><span class="iconText">4</span></div>
-                            <div><img src="/img/area-floor-size-icon.svg" class="amIcons ms-1" width="24" height="24"alt="floor area icon"><span class="iconText">450sqm</span></div>
-                            <div><img src="/img/area.svg" class="amIcons ms-1" alt="lot area icon"><span class="iconText">192sqm</span></div>
-                            <button class="compareBtn rounded-pill"><img src="/img/plus-circle.svg" class="d-none plus"> Compare</button>
-                          </div>
-                          <div class="mCardAddress">
-                            <img src="/img/map.svg" alt=""><small>Greenwoods Executive Village, Pinagbuhatan, Pasig City</small>
-                          </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col w-100">
-                  <nav aria-label="Page navigation">
-                    <ul class="page pagination justify-content-center">
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&laquo;</span>
-                        </a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item"><a class="page-link" href="#">4</a></li>
-                      <li class="page-item"><a class="page-link" href="#">5</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section class="help_con">
-      <div class="help d-flex flex-column align-items-center">
-        <h1 class="display-4">Let us help you</h1>
-        <p>Use the form below to send us a message</p>
-        <form action="">
-          <div class="mb-3 d-flex">
-            <input type="text" class="form-control me-1" id="fname" placeholder="First Name">
-            <input type="text" class="form-control ms-1" id="fname" placeholder="Last Name">
-          </div>
-          <div class="mb-3">
-            <input type="text" class="form-control" id="fname" placeholder="Contact Number">
-          </div>
-          <div class="mb-3">
-            <input type="email" class="form-control" id="fname" placeholder="Email">
-          </div>
-          <div class="mb-3">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message"></textarea>
-          </div>
-          <div class="mb-3 text-center">
-            <p class="m-0">Security Number: 20307</p>
-            <p>Enter the security number below</p>
-          </div>
-          <div class="mb-3">
-            <input type="text" class="form-control" id="fname" placeholder="Enter Security Code">
-          </div>
-
-          <div class="mb-3 text-center">
-            <button class="btn btn-primary btn" type="submit">Send Message</button>
-          </div>
-        </form>
-      </div>
-    </section>
+    </nav>
     
+      <!--main-->
+      <section class="py-md-5">
+        <div class="container-xl">
+          <div class="row justify-content-center">
+            <!-- FILTERS -->
+            <!-- desktopfilter -->
+            <div class="col-3 align-items-center d-none d-lg-block rounded-start-3 color filterCon me-4">
+              <div class="sticky-top text-white px-1 py-4  " >
+                <p class="fw-bold text-lg-center filterText">FILTER YOUR RESULTS</p>
+                <form>
+                  <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm rounded-pill" placeholder="Keyword or Place" aria-describedby="keyword or place">
+                  </div>
+  
+                  <div class="mb-3 d-flex justify-content-between">
+                    <div class="btn-group btn-group-sm"  role="group" aria-label="Basic radio toggle button group">
+                      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                      <label class="btn rounded-start-pill " id="rlabel1" for="btnradio1">For Sale</label>
+                      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                      <label class="btn rounded-end-pill" id="rlabel2" for="btnradio2">Forclosure</label>
+                    </div>
+                      <a class="btn btn-sm rentBtn rounded-pill ms-2" href="#" role="button">Rent<img src="./images/link-external.svg"></a>
+                  </div>
+                  <div class="mb-3">
+                    
+                    <p class="mb-1 filterText">Price</p>
+                    <div class="row align-items-center fw-bold fs-3">
+                      <div class="col">
+                        <input type="text" class="form-control form-control-sm rounded-2 text-center" placeholder="Minimum" aria-describedby="minimum">
+                      </div>
+                      -
+                      <div class="col">
+                        <input type="text" class="form-control form-control-sm rounded-2 text-center" placeholder="Maximum" aria-describedby="Maximum">
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="mb-3 ">
+                    <p class="filterText">Property Type</p>
+                    <div class="row g-0 row-cols-2 ">
+                      <div class="col properties">
+                        <div class="d-flex align-items-center">
+                          <input type="radio" class="property" id="any" name="property" value="any">
+                          <label for="any">Any</label>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <input type="radio" class="property" id="commercial" name="property" value="commercial">
+                          <label for="commercial">Commercial</label>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <input type="radio" class="property" id="land" name="property" value="land">
+                        <label for="land">Land</label>
+                        </div>
+                      </div>
+  
+                      <div class="col properties">
+                        <div class="d-flex align-items-center">
+                          <input type="radio" class="property" id="townhouse" name="property" value="townhouse">
+                          <label for="townhouse">Townhouse</label>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <input type="radio" class="property" id="house and lot" name="property" value="house and lot">
+                          <label for="house and lot">House and  Lot</label>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <input type="radio" class="property" id="condominium" name="property" value="condominium">
+                        <label for="condominium">Condominium</label>
+                        </div>  
+                      </div>
+                  </div>
+                </div>
+  
+                
+                  <div class="d-flex">
+                      <input class="btn btn-warning w-100 fw-bold mb-3" style="font-size:14px;" type="submit" value="APPLY FILTER">
+                  </div>
+                
+              </form>
+                <div class="d-flex flex-column align-items-center info d-none d-xl-block">
+                  
+                    <p class="text-center filterText">Connect with us</p>
+                    <form class="d-flex flex-column mb-3 w-100"id="emailform" action="">
+                      <input type="email" class=" form-control form-control rounded-5 mb-2" name="email" id="email" placeholder="Your Email">
+                      <button class="btn btn-sm rounded-pill w-50 emailBtn" type='submit' for='emailform'>Submit</button> 
+                    </form>
+               
+                  <div class="contact">
+                    <p class="text-center filterText">You may contact us thru</p>
+                    <div class=" rounded-2 mb-3 infoCard">
+                      <div class="row g-0">
+                        <div class="col-4">
+                          <img class="infoIcons"src="./images/mappin.png" alt="">
+                        </div>
+                        <div class="col contactInfo "><p>Suite 932 Mega Plaza Bldg. ADB Avenue, Ortigas Center Pasig City</p>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="  rounded-2 mb-3 infoCard">
+                      <div class="row g-0">
+                        <div class="col-4">
+                          <img class="infoIcons" src="./images/facebook-logo-240.png" alt="">
+                        </div>
+                        <div class="col contactInfo">
+                          <p>OFFICE: +02 7211 2774</p>
+                          <p>Sun: +63 917 119 8992</p>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class=" rounded-2 mb-3 infoCard">
+                      <div class="row g-0">
+                        <div class="col-4">
+                          <img class="infoIcons"src="./images/link-regular-240.png" alt="">
+                        </div>
+                        <div class="col contactInfo">
+                          <p>info@philproperties.ph</p>
+                          <p>fb.com/PhilProperties.ph</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <!-- mobilefilter -->
+            <div class="my-3 container d-lg-none">
+              <form id="filterForm" action="">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-group">
+                      <span class="input-group-text" id="basic-addon1"><img src="./images/Search.svg" alt="search icon"></span>
+                      <input type="text" class="form-control" placeholder="Keyword or Place" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                  <div class="col-3 p-0">
+                    <div class="dropdown-center">
+                      <button class="btn dropdown-toggle fw-bolder fColor rounded-4 mFilterBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="d-none d-md-inline"><img src="./images/Filter_alt.svg" alt="filter icon"></span> Filter
+                      </button>
+                      <ul class=" p-0 m-0 dropdown-menu dDown">
+                        <p class="py-1 px-2 fw-bolder mFilterHeader">FILTER</p>
+                        <div class="m-3">
+                          <li>
+                            <div class=" d-flex flex-column">
+                              
+                              <h1 class="fs-6 fw-bolder ">OFFER TYPE</h1>
+                              <div>
+                                <input type="radio" name="offerType" id="forSale">
+                                <label for="forSale">For Sale</label>
+                              </div>
+                              <div>
+                                <input type="radio" name="offerType" id="forClosure">
+                              <label for="forClosure">Forclosure</label>
+                              </div>
+                              <div>
+                                <input type="radio" name="offerType" id="forRent">
+                                <label for="forRent">For Rent</label>
+                              </div>
+                            </div>
+                          </li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li>
+                            <div class="row">
+                              <h1 class="fs-6 fw-bolder">PRICE</h1>
+                              <div class="col"><input class="form-control form-control-sm" type="text" placeholder="Minimum" aria-label=".form-control-sm example"></div>
+                              <div class="col"><input class="form-control form-control-sm" type="text" placeholder="Maximum" aria-label=".form-control-sm example"></div>
+                            </div>
+                          </li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li>
+                            <div class="d-flex flex-column">
+                              <div>
+                                <p class="fs-6 fw-bolder text-uppercase">Property Type</p>
+                                <input type="radio" name="propType" id="any">
+                                <label for="any">Any</label>
+                              </div>
+                              <div>
+                                <input type="radio" name="propType" id="commercial">
+                                <label for="commercial">Commercial </label>
+                              </div>
+                              <div>
+                                <input type="radio" name="propType" id="land">
+                                <label for="land">Land </label>
+                              </div>
+                              <div>
+                                <input type="radio" name="propType" id="townhouse">
+                                <label for="townhouse">Townhouse </label>
+                              </div>
+                              <div>
+                                <input type="radio" name="propType" id="lot">
+                                <label for="lot">House and Lot </label>
+                              </div>
+                              <div>
+                                <input type="radio" name="propType" id="condo">
+                                <label for="condo">Condominium </label>
+                              </div>
+                            </div>
+                          </li>
+                        </div>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-3"><input class="btn btn-sm rounded-4 mSortBtn" type="submit" for="filterForm" value="Sort"></div>
+                </div>
+            </form>
+            </div>
+          
+            <!-- CARDS -->
+            <div class="col col-lg-7 background rightCon ">
+              <p class="text-center fs-3 d-none d-xl-block pt-5 fColor"><span class="fw-bold">460</span> Properties For Sale in the Philippines</p>
+            <!-- DESKTOP -->
+              <div class="d-none d-xl-block py-4 ">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../images/view1.jpg" class="img-fluid rounded-start cardImg " alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title title">Mckinley Hills Village House & Lot</h5>
+                        <small>Mckinley Hills, Pinagsama, Taguig City</small>
+                        <p class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium voluptatibus, cumque sint laudantium accusamus ea quidem esse commodi quos.</p>
+                        <p class="card-text fs-4 price">₱14,000,000</p>
+                        <div class="row">
+                          <div class="col-5 p-0">
+                            <ul class="list m-0">
+                              <li>4 Bathrooms</li>
+                              <li>4 Baths</li>
+                              <li>250sqm Floor Area</li>
+                              <li>150sqm Lot Area</li>
+                            </ul>
+                          </div>
+                          <div class="col d-flex flex-column justify-content-center ps-0">
+                            <button type="button" class="btn rounded-pill text-start mb-2 cardBtn"><img src="./images/info-circle.svg" class="btnImg">View Info <img class="arrowImg" src="./images/Expand_right.svg" alt=""></button>
+                            <button type="button" class="btn rounded-pill text-start cardBtn"><img src="./images/plus-circle.svg" class="btnImg">Compare</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+  
+              
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../images/view1.jpg" class="img-fluid rounded-start cardImg " alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title title">Mckinley Hills Village House & Lot</h5>
+                        <small>Mckinley Hills, Pinagsama, Taguig City</small>
+                        <p class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium voluptatibus, cumque sint laudantium accusamus ea quidem esse commodi quos.</p>
+                        <p class="card-text fs-4 price">₱14,000,000</p>
+                        <div class="row">
+                          <div class="col-5 p-0">
+                            <ul class="list m-0">
+                              <li>4 Bathrooms</li>
+                              <li>4 Baths</li>
+                              <li>250sqm Floor Area</li>
+                              <li>150sqm Lot Area</li>
+                            </ul>
+                          </div>
+                          <div class="col d-flex flex-column justify-content-center ps-0">
+                            <button type="button" class="btn rounded-pill text-start mb-2 cardBtn"><img src="./images/info-circle.svg" class="btnImg">View Info <img class="arrowImg" src="./images/Expand_right.svg" alt=""></button>
+                            <button type="button" class="btn rounded-pill text-start cardBtn"><img src="./images/plus-circle.svg" class="btnImg">Compare</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../images/view1.jpg" class="img-fluid rounded-start cardImg " alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title title">Mckinley Hills Village House & Lot</h5>
+                        <small>Mckinley Hills, Pinagsama, Taguig City</small>
+                        <p class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium voluptatibus, cumque sint laudantium accusamus ea quidem esse commodi quos.</p>
+                        <p class="card-text fs-4 price">₱14,000,000</p>
+                        <div class="row">
+                          <div class="col-5 p-0">
+                            <ul class="list m-0">
+                              <li>4 Bathrooms</li>
+                              <li>4 Baths</li>
+                              <li>250sqm Floor Area</li>
+                              <li>150sqm Lot Area</li>
+                            </ul>
+                          </div>
+                          <div class="col d-flex flex-column justify-content-center ps-0">
+                            <button type="button" class="btn rounded-pill text-start mb-2 cardBtn"><img src="./images/info-circle.svg" class="btnImg">View Info <img class="arrowImg" src="./images/Expand_right.svg" alt=""></button>
+                            <button type="button" class="btn rounded-pill text-start cardBtn"><img src="./images/plus-circle.svg" class="btnImg">Compare</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+             
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../images/view1.jpg" class="img-fluid rounded-start cardImg " alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title title">Mckinley Hills Village House & Lot</h5>
+                        <small>Mckinley Hills, Pinagsama, Taguig City</small>
+                        <p class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium voluptatibus, cumque sint laudantium accusamus ea quidem esse commodi quos.</p>
+                        <p class="card-text fs-4 price">₱14,000,000</p>
+                        <div class="row">
+                          <div class="col-5 p-0">
+                            <ul class="list m-0">
+                              <li>4 Bathrooms</li>
+                              <li>4 Baths</li>
+                              <li>250sqm Floor Area</li>
+                              <li>150sqm Lot Area</li>
+                            </ul>
+                          </div>
+                          <div class="col d-flex flex-column justify-content-center ps-0">
+                            <button type="button" class="btn rounded-pill text-start mb-2 cardBtn"><img src="./images/info-circle.svg" class="btnImg">View Info <img class="arrowImg" src="./images/Expand_right.svg" alt=""></button>
+                            <button type="button" class="btn rounded-pill text-start cardBtn"><img src="./images/plus-circle.svg" class="btnImg">Compare</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../images/view1.jpg" class="img-fluid rounded-start cardImg " alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title title">Mckinley Hills Village House & Lot</h5>
+                        <small>Mckinley Hills, Pinagsama, Taguig City</small>
+                        <p class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium voluptatibus, cumque sint laudantium accusamus ea quidem esse commodi quos.</p>
+                        <p class="card-text fs-4 price">₱14,000,000</p>
+                        <div class="row">
+                          <div class="col-5 p-0">
+                            <ul class="list m-0">
+                              <li>4 Bathrooms</li>
+                              <li>4 Baths</li>
+                              <li>250sqm Floor Area</li>
+                              <li>150sqm Lot Area</li>
+                            </ul>
+                          </div>
+                          <div class="col d-flex flex-column justify-content-center ps-0">
+                            <button type="button" class="btn rounded-pill text-start mb-2 cardBtn"><img src="./images/info-circle.svg" class="btnImg">View Info <img class="arrowImg" src="./images/Expand_right.svg" alt=""></button>
+                            <button type="button" class="btn rounded-pill text-start cardBtn"><img src="./images/plus-circle.svg" class="btnImg">Compare</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../images/view1.jpg" class="img-fluid rounded-start cardImg " alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title title">Mckinley Hills Village House & Lot</h5>
+                        <small>Mckinley Hills, Pinagsama, Taguig City</small>
+                        <p class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium voluptatibus, cumque sint laudantium accusamus ea quidem esse commodi quos.</p>
+                        <p class="card-text fs-4 price">₱14,000,000</p>
+                        <div class="row">
+                          <div class="col-5 p-0">
+                            <ul class="list m-0">
+                              <li>4 Bathrooms</li>
+                              <li>4 Baths</li>
+                              <li>250sqm Floor Area</li>
+                              <li>150sqm Lot Area</li>
+                            </ul>
+                          </div>
+                          <div class="col d-flex flex-column justify-content-center ps-0">
+                            <button type="button" class="btn rounded-pill text-start mb-2 cardBtn"><img src="./images/info-circle.svg" class="btnImg">View Info <img class="arrowImg" src="./images/Expand_right.svg" alt=""></button>
+                            <button type="button" class="btn rounded-pill text-start cardBtn"><img src="./images/plus-circle.svg" class="btnImg">Compare</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- TABLETMOBILE CARDS -->
+              <div class="row g-md-3 row-cols-md-2 d-xl-none p-0">
+                  <div class="col">
+                    <div class="card ">
+                      <img src="./images/view1.jpg" class=" card-img-top" alt="house picture">
+                      <div class="card-body">
+                        <div class="row +">
+                          <div class="col-7"><h6 class="card-title m-0">Mckinley Hills Village House & Lot</h6></div>
+                          <div class="col-5 d-flex justify-content-end"><h6>₱16,000,000</h6></div>
+                        </div>
+                        <h6 class="amenhead fw-bold m-0">AMENETIES</h6>
+                            <div class="ameneties d-flex ">
+                              <div><img src="./images/bed.svg" class="amIcons" alt="bed icon"> <span class="iconText">4</span></div>
+                              <div><img src="./images/bath.svg" class="amIcons  ms-1" alt="bath icon"><span class="iconText" >4</span></div>
+                              <div><img src="./images/area-floor-size-icon.svg" class="amIcons ms-1" width="24" height="24"alt="floor area icon"><span class="iconText">450sqm</span></div>
+                              <div><img src="./images/area.svg" class="amIcons ms-1" alt="lot area icon"><span class="iconText">192sqm</span></div>
+                              <button class="compareBtn rounded-pill"><img src="./images/plus-circle.svg" class="d-md-none plus"> Compare</button>
+                            </div>
+                            <div class="mCardAddress">
+                              <img src="./images/map.svg" alt=""><small>Greenwoods Executive Village, Pinagbuhatan, Pasig City</small>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="col">
+                    <div class="card" >
+                      <img src="./images/view1.jpg" class=" card-img-top" alt="house picture">
+                      <div class="card-body">
+                        <div class="row gx-0">
+                          <div class="col-7"><h6 class="card-title m-0">Mckinley Hills Village House & Lot</h6></div>
+                          <div class="col-5 d-flex justify-content-end"><h6>₱16,000,000</h6></div>
+                        </div>
+                        <h6 class="amenhead fw-bold m-0">AMENETIES</h6>
+                            <div class="ameneties d-flex ">
+                              <div><img src="./images/bed.svg" class="amIcons" alt="bed icon"> <span class="iconText">4</span></div>
+                              <div><img src="./images/bath.svg" class="amIcons  ms-1" alt="bath icon"><span class="iconText" >4</span></div>
+                              <div><img src="./images/area-floor-size-icon.svg" class="amIcons ms-1" width="24" height="24"alt="floor area icon"><span class="iconText">450sqm</span></div>
+                              <div><img src="./images/area.svg" class="amIcons ms-1" alt="lot area icon"><span class="iconText">192sqm</span></div>
+                              <button class="compareBtn rounded-pill "><img src="./images/plus-circle.svg" class="d-none plus"> Compare</button>
+                            </div>
+                            <div class="mCardAddress">
+                              <img src="./images/map.svg" alt=""><small>Greenwoods Executive Village, Pinagbuhatan, Pasig City</small>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="col">
+                    <div class="card">
+                      <img src="./images/view1.jpg" class=" card-img-top" alt="house picture">
+                      <div class="card-body">
+                        <div class="row gx-0">
+                          <div class="col-7"><h6 class="card-title m-0">Mckinley Hills Village House & Lot</h6></div>
+                          <div class="col-5 d-flex justify-content-end"><h6>₱16,000,000</h6></div>
+                        </div>
+                        <h6 class="amenhead fw-bold m-0">AMENETIES</h6>
+                            <div class="ameneties d-flex ">
+                              <div><img src="./images/bed.svg" class="amIcons" alt="bed icon"> <span class="iconText">4</span></div>
+                              <div><img src="./images/bath.svg" class="amIcons  ms-1" alt="bath icon"><span class="iconText" >4</span></div>
+                              <div><img src="./images/area-floor-size-icon.svg" class="amIcons ms-1" width="24" height="24"alt="floor area icon"><span class="iconText">450sqm</span></div>
+                              <div><img src="./images/area.svg" class="amIcons ms-1" alt="lot area icon"><span class="iconText">192sqm</span></div>
+                              <button class="compareBtn rounded-pill"><img src="./images/plus-circle.svg" class="d-none plus">Compare</button>
+                            </div>
+                            <div class="mCardAddress">
+                              <img src="./images/map.svg" alt=""><small>Greenwoods Executive Village, Pinagbuhatan, Pasig City</small>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col">
+                    <div class="card">
+                      <img src="./images/view1.jpg" class=" card-img-top" alt="house picture">
+                      <div class="card-body">
+                        <div class="row gx-0">
+                          <div class="col-7"><h6 class="card-title m-0">Mckinley Hills Village House & Lot</h6></div>
+                          <div class="col-5 d-flex justify-content-end"><h6>₱16,000,000</h6></div>
+                        </div>
+                        <h6 class="amenhead fw-bold m-0">AMENETIES</h6>
+                            <div class="ameneties d-flex ">
+                              <div><img src="./images/bed.svg" class="amIcons" alt="bed icon"> <span class="iconText">4</span></div>
+                              <div><img src="./images/bath.svg" class="amIcons  ms-1" alt="bath icon"><span class="iconText">4</span></div>
+                              <div><img src="./images/area-floor-size-icon.svg" class="amIcons ms-1" width="24" height="24"alt="floor area icon"><span class="iconText">450sqm</span></div>
+                              <div><img src="./images/area.svg" class="amIcons ms-1" alt="lot area icon"><span class="iconText">192sqm</span></div>
+                              <button class="compareBtn rounded-pill"><img src="./images/plus-circle.svg" class="d-none plus"> Compare</button>
+                            </div>
+                            <div class="mCardAddress">
+                              <img src="./images/map.svg" alt=""><small>Greenwoods Executive Village, Pinagbuhatan, Pasig City</small>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col w-100">
+                    <nav aria-label="Page navigation">
+                      <ul class="page pagination justify-content-center">
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="help_con">
+        <div class="help d-flex flex-column align-items-center">
+          <h1 class="display-4 text-white">Let us help you</h1>
+          <p>Use the form below to send us a message</p>
+          <form action="">
+            <div class="mb-3 d-flex">
+              <input type="text" class="form-control me-1" id="fname" placeholder="First Name">
+              <input type="text" class="form-control ms-1" id="fname" placeholder="Last Name">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="fname" placeholder="Contact Number">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" id="fname" placeholder="Email">
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message"></textarea>
+            </div>
+            <div class="mb-3 text-center">
+              <p class="m-0">Security Number: 20307</p>
+              <p>Enter the security number below</p>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="fname" placeholder="Enter Security Code">
+            </div>
+  
+            <div class="mb-3 text-center">
+              <button class="btn btn-primary btn" type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      
     <footer>
       <div
         class="foot-links list-inline py-2 px-1 px-lg-5 text-center container-fluid"
@@ -937,15 +1028,5 @@
       integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
       crossorigin="anonymous"
     ></script>
-  </body>
-</html>
-
-
-
-
-
-
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   </body>
 </html>
