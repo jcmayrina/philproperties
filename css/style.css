@@ -248,34 +248,21 @@ footer {
   height: 100%;
 }
 
-.latestprop .item {
-  padding: 0.5em;
-  display: flex;
-  justify-content: center;
-}
-
-.latestprop {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.latestprop .owl-carousel {
-  max-width: 60%;
-}
-
+.latestprop .item,
 .latestvid .item {
   padding: 0.5em;
   display: flex;
   justify-content: center;
 }
 
+.latestprop,
 .latestvid {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.latestprop .owl-carousel,
 .latestvid .owl-carousel {
   max-width: 60%;
 }
@@ -321,10 +308,12 @@ footer {
   .owl-nav {
     display: none !important;
   }
-  .latestprop .item {
+  .latestprop .item,
+  .latestvid .item {
     padding: 0.3em;
   }
-  .latestprop .owl-carousel {
+  .latestprop .owl-carousel,
+  .latestvid .owl-carousel {
     max-width: 100%;
   }
 }
