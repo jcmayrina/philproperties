@@ -249,7 +249,7 @@ footer {
 }
 
 .latestprop .item {
-  padding: 1.5em;
+  padding: 0.5em;
   display: flex;
   justify-content: center;
 }
@@ -261,7 +261,23 @@ footer {
 }
 
 .latestprop .owl-carousel {
-  max-width: 90%;
+  max-width: 60%;
+}
+
+.latestvid .item {
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.latestvid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.latestvid .owl-carousel {
+  max-width: 60%;
 }
 
 .owl-nav .owl-prev {
@@ -296,6 +312,11 @@ footer {
   transform: translateY(-3px);
 }
 
+.latestprop .item:hover,
+.latestvid .item:hover {
+  transform: translateY(-3px);
+}
+
 @media screen and (max-width: 576px) {
   .owl-nav {
     display: none !important;
@@ -306,4 +327,16 @@ footer {
   .latestprop .owl-carousel {
     max-width: 100%;
   }
+}
+.view {
+  padding: 0.3em 1em 0.3em 1em;
+  border-radius: 50px;
+  border: 1px solid var(--darkblue);
+  color: var(--darkblue);
+}
+
+.view:hover {
+  background: var(--darkblue);
+  border: 1px solid var(--darkblue);
+  color: var(--white);
 }/*# sourceMappingURL=style.css.map */
