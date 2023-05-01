@@ -1,34 +1,35 @@
-section{
-    height: 500px;
+section {
+  height: 500px;
 }
-.imageCarousel img{
-height: 500px;
+.imageCarousel img {
+  height: 500px;
 }
-.indicator{
-    position: static;
+.indicator {
+  position: static;
 }
-.indicator button[data-bs-target]{
-    object-fit: cover;
-    width: 200px;
-    height: 100px;
+.indicator button[data-bs-target] {
+  object-fit: cover;
+  width: 200px;
+  height: 100px;
 }
-.indicator .imageCar{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+.indicator .imageCar {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
-.indicator img{
-    object-fit: cover;
-    height: 100%;
+.indicator img {
+  object-fit: cover;
+  height: 100%;
 }
 
-.carousel-control-next-icon{
-    background-image: url(./images/Expand_right.svg);
+.carousel-control-next-icon {
+  background-image: url(./images/Expand_right.svg);
 }
-.carousel-control-prev-icon{
-    background-image: url(./images/Expand_left.svg);
+.carousel-control-prev-icon {
+  background-image: url(./images/Expand_left.svg);
 }
-.carousel-control-next, .carousel-control-prev{
-    position: relative;
-    background-color: none;
+.carousel-control-next,
+.carousel-control-prev {
+  position: relative;
+  background-color: none;
 }
