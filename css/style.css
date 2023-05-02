@@ -331,7 +331,7 @@ footer {
 }
 
 .places img {
-  height: 15em;
+  height: 25em;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
