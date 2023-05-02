@@ -12,9 +12,6 @@ $(".prop-carousel").owlCarousel({
     768: {
       items: 3,
     },
-    1300: {
-      items: 5,
-    },
   },
 });
 $(".vid-carousel").owlCarousel({
@@ -29,7 +26,7 @@ $(".vid-carousel").owlCarousel({
       items: 1.2,
     },
     768: {
-      items: 3,
+      items: 3.5,
     },
   },
 });
