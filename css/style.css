@@ -114,6 +114,14 @@ footer {
     width: 33.33%;
   }
 }
+@media screen and (min-width: 576px) and (orientation: landscape) {
+  .foot-logo {
+    width: 6em;
+  }
+  .foot-deets {
+    width: 33.33%;
+  }
+}
 .search-cont {
   background-image: url(../images/dream-home.jpg);
   background-position: center;
