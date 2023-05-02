@@ -6,6 +6,7 @@
   --darkblue: #131e3a;
   --yellow: #fcd812;
   --white: #ffffff;
+  --lightblue: #e3eafd;
 }
 
 * {
@@ -95,8 +96,17 @@ footer {
 .foot-deets a:hover {
   color: var(--yellow);
 }
+
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  .foot-logo {
+    width: 6em;
+  }
+  .foot-deets {
+    width: 33.33%;
+  }
+}
 .search-cont {
-  background-image: url(../images/banner1.jpg);
+  background-image: url(../images/dream-home.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -106,7 +116,7 @@ footer {
   background: rgba(255, 255, 255, 0.4);
 }
 .search-overlay .title {
-  text-shadow: 0 0 4px black;
+  text-shadow: 0 0 5px black;
 }
 .btn-rent,
 .btn-buy {
@@ -348,4 +358,50 @@ footer {
   .places .col {
     padding: 0 1.5em 0 1.5em;
   }
+}
+
+.help_con {
+  padding: 40px 10px;
+  color: white;
+  background: linear-gradient(to top, #131e3ad0, #131e3ad0),
+    url(../images/banner2.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.help_con button {
+  background-color: white;
+  font-weight: bolder;
+  color: #131e3a;
+  border: none;
+}
+.help_con button:hover,
+.help_con button:active {
+  background-color: #131e3a;
+  font-weight: bolder;
+  color: white;
+  border: none;
+}
+
+.help_con p {
+  color: var(--white);
+}
+.team {
+  background: var(--lightblue);
+  padding: 2em;
+}
+.team .bi,
+.team a {
+  color: var(--white);
+}
+.team .links {
+  color: var(--white);
+  padding: 0.5em 0.5em 0.5em 1em;
+  background: var(--darkblue);
+  border-radius: 10px;
+  margin: 0.1em;
+}
+.team .bi-chevron-right {
+  position: absolute;
+  right: 5;
+  top: 10;
 }
