@@ -1,0 +1,79 @@
+.dBlueBanner{
+    height: 25dvh;
+    background-color: #131e3a;
+}
+.topSection{
+    margin-top: -22vh;
+    
+}
+.topFont h3, .topFont p{
+    color: white;
+}
+.topFont p{
+    line-height: normal;
+    font-weight: 50;
+}
+.imgBanner img{
+  
+    width: 100%;
+}
+.form_container{
+    border: 1px #c7c6c6 solid;
+}
+.boldHead{
+    font-weight: 900;
+}
+fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0;
+    padding-bottom: .50em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px #c7c6c6 solid;
+    border-radius:10px;
+    margin-bottom: 10px;
+  }
+legend{
+    all: initial;
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+}
+
+.form input{
+    border: none;
+    width: 100%;
+    margin: 0;
+}
+select, textarea{
+    border:none !important;
+}
+.form input:focus{
+    border: none;
+    outline: none;
+}
+.sendBtn{
+    padding: 10px 20px;
+    background-color: #131e3a;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+
+@media (min-width: 768px) and (max-width:1199px){
+
+.topFont p{
+width: 60%;
+}
+
+}
+
+@media (min-width: 1200px){
+.con{
+   padding: 20px 20vw;
+}
+}
