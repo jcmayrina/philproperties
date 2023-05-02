@@ -183,6 +183,22 @@ footer {
   border-radius: 0 5px 5px 5px;
 }
 
+@media screen and (min-width: 768px) {
+  .search-cont {
+    padding: 5em !important;
+  }
+  .search-overlay {
+    background: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .search-cont {
+    padding: 10em !important;
+  }
+  .search-overlay {
+    background: none;
+  }
+}
 .dev-img-con {
   height: 50px;
   width: 100%;
@@ -206,6 +222,14 @@ footer {
   flex-wrap: wrap;
 }
 
+@media screen and (min-width: 768px) {
+  .dev-img-con {
+    height: 70px;
+  }
+  .dev-con {
+    height: 70px;
+  }
+}
 .btn-light {
   background: var(--white);
   color: var(--darkblue);
@@ -264,7 +288,7 @@ footer {
 
 .latestprop .owl-carousel,
 .latestvid .owl-carousel {
-  max-width: 60%;
+  max-width: 65%;
 }
 
 .owl-nav .owl-prev {
@@ -328,4 +352,44 @@ footer {
   background: var(--darkblue);
   border: 1px solid var(--darkblue);
   color: var(--white);
+}
+
+.places img {
+  height: 15em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.places .row {
+  padding-top: 1em;
+}
+
+.places .col {
+  padding: 0 1em 0 0;
+}
+
+.places h5 {
+  background: rgba(19, 30, 58, 0.75);
+  padding: 0.4em;
+  border: 1px solid var(--white);
+  color: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.places .card:hover {
+  transform: translateY(-5px);
+}
+
+@media screen and (max-width: 576px) {
+  .places .row {
+    padding-top: 0;
+  }
+  .places .col {
+    padding: 0 1.5em 0 1.5em;
+  }
 }/*# sourceMappingURL=style.css.map */
