@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,8 +16,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/buyer.css" />
-    <title>Buyer Information</title>
+    <link rel="stylesheet" href="./css/sell.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-xl m-0 p-0 shadow-lg">
@@ -301,160 +301,187 @@
         </div>
       </div>
     </nav>
-    <main class="d-flex flex-column justify-content-center mb-5">
-      <div class="dBlueBanner w-100"></div>
-      <div class="con">
-        <div class="topSection d-flex flex-column justify-content-center px-4">
-          <div class="topFont">
-            <h3>Buyer Information Form</h3>
-            <p>
-              This Buyer information form will help us to determine what
-              preferences you need to buy a new home.
-            </p>
-          </div>
-          <div class="imgBanner">
-            <img
-              src="./images/buyer-information-form-banner.png"
-              class="img-fluid"
-              alt="Image Banner"
-            />
-          </div>
-        </div>
 
-        <div class="form_container mt-2 mx-4 py-4 px-4 rounded-2">
-          <div class="form d-flex flex-column">
-            <form action="">
-              <h4 class="boldHead">Personal Information</h4>
-              <fieldset>
-                <legend>
-                  <label for="">Name *</label>
-                </legend>
-                <input type="text" name="" id="" />
-              </fieldset>
-              <fieldset>
-                <legend>
-                  <label for="">Address</label>
-                </legend>
-                <input type="text" name="" id="" />
-              </fieldset>
-              <fieldset>
-                <legend>
-                  <label for="">Mobile No. *</label>
-                </legend>
-                <input type="text" name="" id="" />
-              </fieldset>
-              <fieldset>
-                <legend>
-                  <label for="">Email Address *</label>
-                </legend>
-                <input type="text" name="" id="" />
-              </fieldset>
-              <fieldset>
-                <legend>
-                  <label for="">Facebook ID</label>
-                </legend>
-                <input type="text" name="" id="" />
-              </fieldset>
-
-              <h4 class="boldHead mt-5 mb-2">Preferences</h4>
-              <fieldset>
-                <legend>
-                  <label for="">Own or Rent? </label>
-                </legend>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected value="own">Own</option>
-                  <option value="rent">Rent</option>
-                </select>
-              </fieldset>
-
-              <fieldset>
-                <legend>
-                  <label for="">Timeframe of Moving</label>
-                </legend>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected value="1">1 Month</option>
-                  <option value="3">3 Months</option>
-                  <option value="6">6 Months</option>
-                  <option value="undecided">Undecided</option>
-                </select>
-              </fieldset>
-
-              <fieldset>
-                <legend>
-                  <label for="bedroom">Bedroom</label>
-                </legend>
-                <input type="number" name="bedroom" id="bedroom" />
-              </fieldset>
-              <fieldset>
-                <legend>
-                  <label for="bathroom">Bathroom</label>
-                </legend>
-                <input type="number" name="bathroom" id="bathroom" />
-              </fieldset>
-              <fieldset>
-                <legend>
-                  <label for="garage">Car Garage</label>
-                </legend>
-                <input type="number" name="garage" id="garage" />
-              </fieldset>
-
-              <fieldset>
-                <legend>
-                  <label for="">Your Budget* </label>
-                </legend>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected value="2M Below">2M Below</option>
-                  <option selected value="2M - 4M">2M-4M</option>
-                  <option selected value="4M - 6M">4M - 6M</option>
-                  <option selected value="6M - 10M">6M - 10M</option>
-                  <option selected value="10M - 50M">10M - 50M</option>
-                  <option selected value="50M - 100M">50M - 100M</option>
-                  <option selected value="100M - 150M">100M - 150M</option>
-                  <option selected value="150M - Above">150M - Above</option>
-                </select>
-              </fieldset>
-
-              <h5 class="boldHead mt-5 mb-0">Preferred Location</h5>
-              <small>Enter 2 preffered location</small>
-
-              <fieldset>
-                <legend>
-                  <label for="">Location 1 *</label>
-                </legend>
-                <input type="text" name="" id="" />
-              </fieldset>
-
-              <fieldset>
-                <legend>
-                  <label for="">Location 2 *</label>
-                </legend>
-                <input type="text" name="" id="" />
-              </fieldset>
-
-              <fieldset>
-                <legend>
-                  <label for=""
-                    >Is there anything else we need to know to help us find you
-                    a new home?</label
-                  >
-                </legend>
-                <textarea
-                  class="w-100"
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="10"
-                ></textarea>
-              </fieldset>
-
-              <div class="d-flex justify-content-end">
-                <button class="sendBtn" type="submit">Send</button>
+    <div class="banner">
+      <img src="./images/sell_banner.jpg" alt="banner" />
+    </div>
+    <div>
+      <div class="form">
+        <form action="">
+          <div class="form_group active fg1">
+            <small> Step 1 of 3</small>
+            <p>Please tell us about your property</p>
+            <div class="d-flex">
+              <div class="radioBtn">
+                <input
+                  type="radio"
+                  name="classification"
+                  id="r1"
+                  value="For Sale"
+                />
+                <label for="flexRadioDefault1"> For Sale </label>
               </div>
-            </form>
+              <div class="radioBtn">
+                <input
+                  type="radio"
+                  name="classification"
+                  id="r2"
+                  checked
+                  value="For Sale"
+                />
+                <label for="flexRadioDefault2"> For Rent </label>
+              </div>
+            </div>
+
+            <fieldset>
+              <legend>
+                <label for="">Select Category </label>
+              </legend>
+              <select class="form-select" aria-label="Default select example">
+                <option selected value="default">Select Category</option>
+                <option value="rent">Land</option>
+                <option value="rent">House</option>
+                <option value="rent">Apartment</option>
+                <option value="rent">Condominium</option>
+              </select>
+            </fieldset>
+
+            <div class="row area d-flex justify-content-center">
+              <div class="col-sm-12 col-xl-6">
+                <fieldset>
+                  <legend>
+                    <label for="lotArea">Lot Area</label>
+                  </legend>
+                  <input type="text" name="Lot Area" id="lotArea" />
+                </fieldset>
+              </div>
+
+              <div class="col-sm-12 col-xl-6">
+                <fieldset>
+                  <legend>
+                    <label for="floorArea">Floor Area</label>
+                  </legend>
+                  <input type="text" name="Floor Area" id="floorArea" />
+                </fieldset>
+              </div>
+            </div>
+
+            <div class="ameneties row d-flex justify-content-center">
+              <div class="col-sm-12 col-xl-4">
+                <fieldset>
+                  <legend>
+                    <label for="bedroom">Bedroom</label>
+                  </legend>
+                  <input type="text" name="Bedroom" id="bedroom" />
+                </fieldset>
+              </div>
+
+              <div class="col-sm-12 col-xl-4">
+                <fieldset>
+                  <legend>
+                    <label for="bathRoom">Bathroom</label>
+                  </legend>
+                  <input type="text" name="Bathroom" id="bathRoom" />
+                </fieldset>
+              </div>
+
+              <div class="col-sm-12 col-xl-4">
+                <fieldset>
+                  <legend>
+                    <label for="garage">Garage</label>
+                  </legend>
+                  <input type="text" name="Garage" id="garage" />
+                </fieldset>
+              </div>
+            </div>
+
+            <fieldset>
+              <legend>
+                <label for="bedroom">Address</label>
+              </legend>
+              <input type="text" name="Bedroom" id="bedroom" />
+            </fieldset>
+
+            <fieldset>
+              <legend>
+                <label for="bedroom">Price</label>
+              </legend>
+              <input type="text" name="Bedroom" id="bedroom" />
+            </fieldset>
+
+            <fieldset>
+              <legend>
+                <label for="">Description</label>
+              </legend>
+              <textarea></textarea>
+            </fieldset>
+
+            <div class="buttons d-flex justify-content-end">
+              <button class="nextBtn nBtn1" type="button">Next</button>
+            </div>
           </div>
-        </div>
+
+          <div class="form_group fg2">
+            <small> Step 2 of 3</small>
+            <p class="display-6">Upload Property Images</p>
+            <fieldset>
+              <legend>
+                <label for="">Choose File</label>
+              </legend>
+              <div class="mb-3">
+                <label for="formFile" class="form-label"
+                  >Default file input example</label
+                >
+                <input class="form-control" type="file" id="formFile" />
+              </div>
+            </fieldset>
+            <div class="buttons d-flex justify-content-end">
+              <button class="prevBtn pBtn2 me-2">Back</button>
+              <button class="nextBtn nBtn2 me-2" type="button">Next</button>
+              <button class="skipBtn" type="button">Skip</button>
+            </div>
+          </div>
+
+          <div class="form_group fg3">
+            <small> Step 3 of 3</small>
+            <p class="display-6">User Information</p>
+            <fieldset>
+              <legend>
+                <label for="">Firstname</label>
+              </legend>
+              <input type="text" name="" id="" />
+            </fieldset>
+
+            <fieldset>
+              <legend>
+                <label for="">Lastname</label>
+              </legend>
+              <input type="text" name="" id="" />
+            </fieldset>
+
+            <fieldset>
+              <legend>
+                <label for="">Contact No.</label>
+              </legend>
+              <input type="text" name="" id="" />
+            </fieldset>
+
+            <fieldset>
+              <legend>
+                <label for="">Email</label>
+              </legend>
+              <input type="text" name="" id="" />
+            </fieldset>
+
+            <div class="buttons d-flex justify-content-end">
+              <button class="prevBtn me-2 pBtn2" type="button">Back</button>
+              <button class="nextBtn" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
       </div>
-    </main>
+    </div>
+
     <footer>
       <div
         class="foot-links list-inline py-2 px-1 px-lg-5 text-center container-fluid"
@@ -620,15 +647,22 @@
         </div>
       </div>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
-      crossorigin="anonymous"
-    ></script>
   </body>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"
+  ></script>
+  <script src="./js/sell.js"></script>
 </html>
