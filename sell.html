@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/sell.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-xl m-0 p-0 shadow-lg">
+      <a class="navbar-brand d-xl-none d-inline ps-3" href="#"
+        ><img src="./images/philproperties-logo.png" alt="logo"
+      /></a>
+      <button
+        class="navbar-toggler border-0 pe-3"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#main-nav"
+        aria-controls="main-nav"
+        aria-expanded="false"
+        aria-label="Toggle Navigation"
+      >
+        <i
+          class="bi bi-list"
+          style="font-size: 2.5rem; color: var(--darkblue)"
+        ></i>
+        <i
+          class="bi bi-x"
+          style="
+            font-size: 2.5rem;
+            color: white;
+            z-index: 999;
+            position: fixed;
+            top: 2dvh;
+            right: 2dvh;
+            background-color: var(--darkblue);
+            border-radius: 50%;
+          "
+        ></i>
+      </button>
+      <div
+        class="collapse navbar-collapse align-items-baseline justify-content-around text-start text-xl-center row p-0 m-0 top-0"
+        id="main-nav"
+      >
+        <ul
+          class="navbar-nav align-items-baseline align-items-xl-center fw-medium col justify-content-center"
+        >
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link" href="#"></a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link" href="#">For Sale</a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link" href="#">For Rent</a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link" href="#">Sell Your Property</a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link d-xl-inline d-none" href="#"
+              ><img src="./images/philproperties-logo.png" alt="logo"
+            /></a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link" href="#">Be Our Agent</a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item mx-3 d-xl-inline d-none">
+            <a
+              class="nav-link"
+              href=""
+              data-bs-toggle="modal"
+              data-bs-target="#modalCalculator"
+              ><i
+                class="bi bi-calculator align-items-center"
+                style="font-size: 2rem; color: white"
+              ></i
+            ></a>
+          </li>
+          <li class="nav-item dropdown d-xl-none d-inline ms-5 mt-5">
+            <a
+              class="nav-link dropdown-toggle fs-4"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Links
+            </a>
+            <ul class="dropdown-menu border-0">
+              <li><a class="dropdown-item" href="#">Home</a></li>
+              <li><a class="dropdown-item" href="#">Videos</a></li>
+              <li><a class="dropdown-item" href="#">Join Us</a></li>
+              <li><a class="dropdown-item" href="#">Partners</a></li>
+              <li><a class="dropdown-item" href="#">Careers</a></li>
+              <li><a class="dropdown-item" href="#">About Us</a></li>
+              <li><a class="dropdown-item" href="#">Contact Us</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown d-xl-none d-inline ms-5">
+            <a
+              class="nav-link dropdown-toggle fs-4"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Properties
+            </a>
+            <ul class="dropdown-menu border-0">
+              <li><a class="dropdown-item" href="#">For Sale</a></li>
+              <li><a class="dropdown-item" href="#">For Rent</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Sell Your Property</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Buyer Information Form</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown d-xl-none d-inline ms-5">
+            <a
+              class="nav-link dropdown-toggle fs-4"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Tools
+            </a>
+            <ul class="dropdown-menu border-0">
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalCalculator"
+                  >Loan calculator</a
+                >
+              </li>
+              <li><a class="dropdown-item" href="#">Loan Requirements</a></li>
+              <li><a class="dropdown-item" href="#">Loan Processing</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Account Login</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="mapembed d-xl-none d-lg-inline d-none col">
+          <li class="nav-link">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.1730196542785!2d121.05801057581287!3d14.589214877353928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c94ff2bca9b7%3A0xf3ba9eb2aff1b683!2sPhilproperties!5e0!3m2!1sen!2sph!4v1681793039262!5m2!1sen!2sph"
+              width="700"
+              style="border: 0; height: 90dvh; top: 0; right: 0"
+              class="position-absolute"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </li>
+        </ul>
+        <ul class="mapembed d-lg-none d-inline col p-0">
+          <li class="nav-link">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.1730196542785!2d121.05801057581287!3d14.589214877353928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c94ff2bca9b7%3A0xf3ba9eb2aff1b683!2sPhilproperties!5e0!3m2!1sen!2sph!4v1681793039262!5m2!1sen!2sph"
+              height="150"
+              style="
+                border: 0;
+                width: 100vw;
+                bottom: 10dvh;
+                left: 0;
+                position: absolute;
+              "
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </li>
+        </ul>
+        <ul
+          class="bot-links d-xl-none d-block col-12 position-absolute text-center p-0 m-0"
+        >
+          <li
+            class="bt-fb m-0 p-0 shadow-lg d-flex justify-content-center align-items-center"
+          >
+            <a
+              href="#"
+              class="nav-link flex-wrap d-flex align-items-center justify-content-center"
+              ><i class="bi bi-facebook px-2" style="font-size: 1.5rem"></i
+              >Follow us on Facebook</a
+            >
+          </li>
+          <li
+            class="bt-call m-0 p-0 d-flex justify-content-center align-items-center"
+          >
+            <a
+              href="#"
+              class="nav-link flex-wrap d-flex align-items-center justify-content-center text-white"
+              ><i
+                class="bi bi-telephone px-2"
+                style="font-size: 1.5rem; color: white"
+              ></i
+              >(02) 7211 2274</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="modalCalculator"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="modalCalculatorLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalCalculatorLabel">
+                Loan Calculator
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="ps-3 pb-3">
+                <form class="d-flex m-0 border-0 bg-white">
+                  <div class="col-3">
+                    <label for="int-rate ">Interest Rate</label>
+                    <select
+                      class="form-select border-1 p-0 m-0"
+                      name="int-rate"
+                      id="inputGroupSelect01"
+                    >
+                      <option value="any" selected>Any</option>
+                      <option value="commercial">Commercial</option>
+                      <option value="land">Land</option>
+                      <option value="townhouse">Townhouse</option>
+                      <option value="house">House & Lot</option>
+                      <option value="condominium">Condominium</option>
+                    </select>
+                  </div>
+                  <div class="col-3">
+                    <label for="years">Years</label>
+                    <select
+                      class="form-select border-1 p-0 m-0"
+                      name="years"
+                      id="inputGroupSelect01"
+                    >
+                      <option value="any" selected>Any</option>
+                      <option value="commercial">Commercial</option>
+                      <option value="land">Land</option>
+                      <option value="townhouse">Townhouse</option>
+                      <option value="house">House & Lot</option>
+                      <option value="condominium">Condominium</option>
+                    </select>
+                  </div>
+                  <div class="col-3">
+                    <label for="int-rate">Loan Amount</label>
+                    <input
+                      class="form-control p-0 m-0 border-1"
+                      name="loan"
+                      type="text"
+                      placeholder="Search for City, Neighborhood, or Developer"
+                      aria-label="Text input with dropdown button"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <button class="btn border-0 px-3 m-0 fs-6" type="submit">
+                      Compute
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="banner">
+      <img src="./images/sell_banner.jpg" alt="banner" />
+    </div>
+    <div>
+      <div class="form">
+        <form action="">
+          <div class="form_group active fg1">
+            <small> Step 1 of 3</small>
+            <p>Please tell us about your property</p>
+            <div class="d-flex">
+              <div class="radioBtn">
+                <input
+                  type="radio"
+                  name="classification"
+                  id="r1"
+                  value="For Sale"
+                />
+                <label for="flexRadioDefault1"> For Sale </label>
+              </div>
+              <div class="radioBtn">
+                <input
+                  type="radio"
+                  name="classification"
+                  id="r2"
+                  checked
+                  value="For Sale"
+                />
+                <label for="flexRadioDefault2"> For Rent </label>
+              </div>
+            </div>
+
+            <fieldset>
+              <legend>
+                <label for="">Select Category </label>
+              </legend>
+              <select class="form-select" aria-label="Default select example">
+                <option selected value="default">Select Category</option>
+                <option value="rent">Land</option>
+                <option value="rent">House</option>
+                <option value="rent">Apartment</option>
+                <option value="rent">Condominium</option>
+              </select>
+            </fieldset>
+
+            <div class="row area d-flex justify-content-center">
+              <div class="col-sm-12 col-xl-6">
+                <fieldset>
+                  <legend>
+                    <label for="lotArea">Lot Area</label>
+                  </legend>
+                  <input type="text" name="Lot Area" id="lotArea" />
+                </fieldset>
+              </div>
+
+              <div class="col-sm-12 col-xl-6">
+                <fieldset>
+                  <legend>
+                    <label for="floorArea">Floor Area</label>
+                  </legend>
+                  <input type="text" name="Floor Area" id="floorArea" />
+                </fieldset>
+              </div>
+            </div>
+
+            <div class="ameneties row d-flex justify-content-center">
+              <div class="col-sm-12 col-xl-4">
+                <fieldset>
+                  <legend>
+                    <label for="bedroom">Bedroom</label>
+                  </legend>
+                  <input type="text" name="Bedroom" id="bedroom" />
+                </fieldset>
+              </div>
+
+              <div class="col-sm-12 col-xl-4">
+                <fieldset>
+                  <legend>
+                    <label for="bathRoom">Bathroom</label>
+                  </legend>
+                  <input type="text" name="Bathroom" id="bathRoom" />
+                </fieldset>
+              </div>
+
+              <div class="col-sm-12 col-xl-4">
+                <fieldset>
+                  <legend>
+                    <label for="garage">Garage</label>
+                  </legend>
+                  <input type="text" name="Garage" id="garage" />
+                </fieldset>
+              </div>
+            </div>
+
+            <fieldset>
+              <legend>
+                <label for="bedroom">Address</label>
+              </legend>
+              <input type="text" name="Bedroom" id="bedroom" />
+            </fieldset>
+
+            <fieldset>
+              <legend>
+                <label for="bedroom">Price</label>
+              </legend>
+              <input type="text" name="Bedroom" id="bedroom" />
+            </fieldset>
+
+            <fieldset>
+              <legend>
+                <label for="">Description</label>
+              </legend>
+              <textarea></textarea>
+            </fieldset>
+
+            <div class="buttons d-flex justify-content-end">
+              <button class="nextBtn nBtn1" type="button">Next</button>
+            </div>
+          </div>
+
+          <div class="form_group fg2">
+            <small> Step 2 of 3</small>
+            <p class="display-6">Upload Property Images</p>
+            <fieldset>
+              <legend>
+                <label for="">Choose File</label>
+              </legend>
+              <div class="mb-3">
+                <label for="formFile" class="form-label"
+                  >Default file input example</label
+                >
+                <input class="form-control" type="file" id="formFile" />
+              </div>
+            </fieldset>
+            <div class="buttons d-flex justify-content-end">
+              <button class="prevBtn pBtn2 me-2">Back</button>
+              <button class="nextBtn nBtn2 me-2" type="button">Next</button>
+              <button class="skipBtn" type="button">Skip</button>
+            </div>
+          </div>
+
+          <div class="form_group fg3">
+            <small> Step 3 of 3</small>
+            <p class="display-6">User Information</p>
+            <fieldset>
+              <legend>
+                <label for="">Firstname</label>
+              </legend>
+              <input type="text" name="" id="" />
+            </fieldset>
+
+            <fieldset>
+              <legend>
+                <label for="">Lastname</label>
+              </legend>
+              <input type="text" name="" id="" />
+            </fieldset>
+
+            <fieldset>
+              <legend>
+                <label for="">Contact No.</label>
+              </legend>
+              <input type="text" name="" id="" />
+            </fieldset>
+
+            <fieldset>
+              <legend>
+                <label for="">Email</label>
+              </legend>
+              <input type="text" name="" id="" />
+            </fieldset>
+
+            <div class="buttons d-flex justify-content-end">
+              <button class="prevBtn me-2 pBtn2" type="button">Back</button>
+              <button class="nextBtn" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div
+        class="foot-links list-inline py-2 px-1 px-lg-5 text-center container-fluid"
+      >
+        <div
+          class="foot-left-links list-inline-item small text-nowrap fw-bold align-top text-start mx-lg-0 pt-lg-2 col-lg-3"
+        >
+          PHILPROPERTIES INT'L CORP
+          <ul class="list-unstyled text-start fw-normal mt-2">
+            <li class="nav-item">
+              <a href="#" class="nav-link"
+                ><i class="bi bi-chevron-right me-1"></i>About Philproperties</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"
+                ><i class="bi bi-chevron-right me-1"></i>Contact Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"
+                ><i class="bi bi-chevron-right me-1"></i>Careers</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="foot-right-links list-inline-item small text-nowrap align-top fw-bold text-start mx-lg-0 pt-lg-2 col-lg-3"
+        >
+          USEFUL RESOURCES
+          <ul class="list-unstyled fw-normal mt-2">
+            <li class="nav-item">
+              <a href="#" class="nav-link"
+                ><i class="bi bi-chevron-right me-1"></i>Buyer Information
+                Form</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"
+                ><i class="bi bi-chevron-right me-1"></i>All Articles</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"
+                ><i class="bi bi-chevron-right me-1"></i>Account Login</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="foot-cont list-inline-item flex-nowrap align-top pt-lg-2 col-lg-3"
+        >
+          <form>
+            <p class="fs-6 fw-bold text-white text-start mb-2">KEEP IN TOUCH</p>
+            <div class="col-xl-7">
+              <label for="email-footer" class="form-label d-none"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                style="border-radius: 100px"
+                id="email-footer"
+                aria-describedby="emailHelp"
+                placeholder="Enter your email..."
+              />
+            </div>
+            <div class="w-100 mb-2"></div>
+            <div class="col-3 text-start">
+              <button
+                type="submit"
+                class="btn btn-primary fw-medium border-0 text-center px-4"
+                style="
+                  background: var(--yellow);
+                  color: var(--darkblue);
+                  border-radius: 100px;
+                "
+              >
+                Submit
+              </button>
+            </div>
+            <div
+              id="emailHelp"
+              class="form-text text-start col text-white mb-4 small"
+            >
+              Stay informed on our news and events.
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="foot-email d-flex justify-content-center px-5">
+        <div class="foot-cont">
+          <div class="d-flex justify-content-center">
+            <hr class="text-white col-12 col-lg-11 col-xl-9" />
+          </div>
+          <div
+            class="foot-bot-links row text-white justify-content-center col-lg-12"
+          >
+            <div
+              class="row mx-0 px-0 ps-lg-4 col-lg-4 col-xl-3 mb-4 align-content-lg-start justify-content-lg-center"
+            >
+              <div class="foot-logo col-4 col-lg-3 col-xl-3">
+                <img
+                  src="./images/mappin.png"
+                  alt="map icon"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="foot-deets col-8 col-xl-6 align-items-center d-flex">
+                <a href="#" class="nav-link"
+                  >Suite 932 Mega Plaza Bldg. ADB Avenue, Ortigas Center Pasig
+                  City</a
+                >
+              </div>
+            </div>
+            <div
+              class="row mx-0 px-0 ps-lg-4 col-lg-4 col-xl-3 mb-4 align-content-lg-start justify-content-lg-center"
+            >
+              <div class="foot-logo col-4 col-lg-3 col-xl-3">
+                <img
+                  src="./images/mobile-alt-regular-240.png"
+                  alt="mobile icon"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="foot-deets col-8 col-xl-6 align-items-center d-flex">
+                <div class="row">
+                  <div class="col-12">
+                    <a href="#" class="nav-link">OFFICE: +0272112774</a>
+                  </div>
+                  <div class="col-12">
+                    <a href="#" class="nav-link">MOBILE: +639171198992</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row mx-0 px-0 ps-lg-4 col-lg-4 col-xl-3 mb-4 align-content-lg-start justify-content-lg-center"
+            >
+              <div class="foot-logo col-4 col-lg-3 col-xl-3">
+                <img
+                  src="./images/link-regular-240.png"
+                  alt="call icon"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="foot-deets col-8 col-xl-6 align-items-center d-flex">
+                <div class="row">
+                  <div class="col-12">
+                    <a href="#" class="nav-link">info@philproperties.ph</a>
+                  </div>
+                  <div class="col-12">
+                    <a href="#" class="nav-link">fb.com/PhilProperties.ph</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-text text-white mb-3 text-center">
+            Copyright © 2006 - 2023. Philproperties International Corporation.
+            All rights reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"
+  ></script>
+  <script src="./js/sell.js"></script>
+</html>
