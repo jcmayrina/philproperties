@@ -16,3 +16,8 @@ $(".pBtn1").click(function(){
     $(".fg1").show();
     $(".fg2").hide();
 });
+$(".skipBtn").click(function(){
+    $(".fg3").show();
+    $(".fg2").hide();
+});
+
