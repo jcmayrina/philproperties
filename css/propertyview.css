@@ -11,10 +11,14 @@
 }
 .caption {
   background-color: rgba(0, 0, 0, 0.699);
+  color: white;
   right: 0;
   left: 0;
   bottom: 0;
   padding: 20px 0;
+}
+.caption > p {
+  color: white;
 }
 .carouselBtn {
   background-color: rgba(0, 0, 0, 0.945);
@@ -146,7 +150,9 @@ input[type="date"] {
   border-top: 2px #131e3a solid;
   padding: 20px 0;
 }
-
+.checked, .checked1{
+  display: none;
+}
 @media (min-width: 992px) {
   .carImageCon {
     width: 100%;
