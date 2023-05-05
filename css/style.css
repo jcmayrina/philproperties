@@ -494,4 +494,14 @@ footer {
   .about .fs-6 {
     line-height: 30px;
   }
+}
+.missionvision {
+  background: var(--darkblue);
+}
+
+.missionvision .fs-2,
+.missionvision .fs-6,
+.missionvision .bi,
+.missionvision li {
+  color: var(--white);
 }/*# sourceMappingURL=style.css.map */
