@@ -1,0 +1,21 @@
+.vid-con{
+    cursor: pointer;
+}
+
+.vid-modal-content{
+    background: transparent;
+    border: none;
+}
+.vid-modal-content button{
+    background: transparent;
+    border: none;
+}
+.close > span{
+    color: white;
+    font-size: 2em;
+}
+
+.yt-video{
+  width: 100%;
+   height: 80dvh;
+}

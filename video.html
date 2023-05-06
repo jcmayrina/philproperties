@@ -16,6 +16,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/videos.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-xl m-0 p-0 shadow-lg">
@@ -314,6 +315,14 @@
           </div>
         </div>
       </nav>
+      <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content vid-modal-content">
+            <button type="button" class="close text-white d-flex justify-content-end" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <iframe class="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
     <div class="container-lg">
         <section class="pt-3 mb-3">
             <div class="page-text px-2 mb-2">
@@ -324,9 +333,10 @@
             <div class="g-ytsubscribe" data-channel="Philproperties" data-layout="full" data-count="default"></div>
         </section>
         
+        
         <section>
             <div class="row row-cols-md-2 row-cols-lg-3 gy-3 px-2">
-                <div class="col-12">
+                <div class="col-12 vid-con" data-link="https://youtube.com/embed/uiZVssPtPr4" data-bs-toggle="modal" data-bs-target="#myModal">
                     <div class="card">
                         <img src="./images/view1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -334,7 +344,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 vid-con" data-link="https://youtube.com/embed/YIenj4od0WU" data-bs-toggle="modal" data-bs-target="#myModal">
                     <div class="card">
                         <img src="./images/view1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -342,7 +352,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 vid-con" data-link="https://youtube.com/embed/fRoax5F1Ww8"  data-bs-toggle="modal" data-bs-target="#myModal">
                     <div class="card">
                         <img src="./images/view1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -350,7 +360,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 vid-con" data-link="https://youtube.com/embed/WPnFYYrzM-s"  data-bs-toggle="modal" data-bs-target="#myModal">
                     <div class="card">
                         <img src="./images/view1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -358,7 +368,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 vid-con" data-link="https://youtube.com/embed/xJUgSSR9hMk"  data-bs-toggle="modal" data-bs-target="#myModal">
                     <div class="card">
                         <img src="./images/view1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -366,7 +376,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 vid-con" data-link="https://youtube.com/embed/iMDWLOlOhgk"  data-bs-toggle="modal" data-bs-target="#myModal">
                     <div class="card">
                         <img src="./images/view1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -374,7 +384,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 vid-con" data-link="https://youtube.com/embed/xgwsDOnyNSg"  data-bs-toggle="modal" data-bs-target="#myModal">
                     <div class="card">
                         <img src="./images/view1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -382,7 +392,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 vid-con" data-link="https://youtube.com/embed/unznexdmaXI"  data-bs-toggle="modal" data-bs-target="#myModal">
                     <div class="card">
                         <img src="./images/view1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -390,7 +400,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 vid-con" data-link="https://youtube.com/embed/JFywIB6tudo"  data-bs-toggle="modal" data-bs-target="#myModal">
                     <div class="card">
                         <img src="./images/view1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -400,9 +410,6 @@
                 </div>
             </div>
         </section>
-
-
-
 
     </div>
     <footer class="mt-5">
@@ -587,5 +594,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://apis.google.com/js/platform.js"></script>
+    <script src="./js/video.js"></script>
 
 </html>
