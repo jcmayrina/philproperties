@@ -319,185 +319,183 @@
     <div class="banner">
       <img src="./images/sell_banner.jpg" alt="banner" />
     </div>
-    
-      <div class="form">
-        <form action="">
-          <!-- 1st FORM -->
-          <div class="form_group active fg1">
-            <small> Step 1 of 3</small>
-            <p>Please tell us about your property</p>
-            <div class="d-flex mb-2">
-              <div class="radioBtn me-2">
-                <input
-                  type="radio"
-                  name="classification"
-                  id="r1"
-                  value="For Sale"
-                />
-                <label for="flexRadioDefault1"> For Sale </label>
-              </div>
-              <div class="radioBtn">
-                <input
-                  type="radio"
-                  name="classification"
-                  id="r2"
-                  checked
-                  value="For Sale"
-                />
-                <label for="flexRadioDefault2"> For Rent </label>
-              </div>
+
+    <div class="form">
+      <form action="">
+        <!-- 1st FORM -->
+        <div class="form_group active fg1">
+          <small> Step 1 of 3</small>
+          <p>Please tell us about your property</p>
+          <div class="d-flex mb-2">
+            <div class="radioBtn me-2">
+              <input
+                type="radio"
+                name="classification"
+                id="r1"
+                value="For Sale"
+              />
+              <label for="flexRadioDefault1"> For Sale </label>
             </div>
-
-            <fieldset>
-              <legend>
-                <label for="">Select Category </label>
-              </legend>
-              <select class="form-select" aria-label="Default select example">
-                <option selected value="default">Select Category</option>
-                <option value="rent">Land</option>
-                <option value="rent">House</option>
-                <option value="rent">Apartment</option>
-                <option value="rent">Condominium</option>
-              </select>
-            </fieldset>
-
-            <div class="row area d-flex justify-content-center">
-              <div class="col-sm-12 col-xl-6">
-                <fieldset>
-                  <legend>
-                    <label for="lotArea">Lot Area</label>
-                  </legend>
-                  <input type="text" name="Lot Area" id="lotArea" />
-                </fieldset>
-              </div>
-
-              <div class="col-sm-12 col-xl-6">
-                <fieldset>
-                  <legend>
-                    <label for="floorArea">Floor Area</label>
-                  </legend>
-                  <input type="text" name="Floor Area" id="floorArea" />
-                </fieldset>
-              </div>
-            </div>
-
-            <div class="ameneties row d-flex justify-content-center">
-              <div class="col-sm-12 col-xl-4">
-                <fieldset>
-                  <legend>
-                    <label for="bedroom">Bedroom</label>
-                  </legend>
-                  <input type="text" name="Bedroom" id="bedroom" />
-                </fieldset>
-              </div>
-
-              <div class="col-sm-12 col-xl-4">
-                <fieldset>
-                  <legend>
-                    <label for="bathRoom">Bathroom</label>
-                  </legend>
-                  <input type="text" name="Bathroom" id="bathRoom" />
-                </fieldset>
-              </div>
-
-              <div class="col-sm-12 col-xl-4">
-                <fieldset>
-                  <legend>
-                    <label for="garage">Garage</label>
-                  </legend>
-                  <input type="text" name="Garage" id="garage" />
-                </fieldset>
-              </div>
-            </div>
-
-            <fieldset>
-              <legend>
-                <label for="bedroom">Address</label>
-              </legend>
-              <input type="text" name="Bedroom" id="bedroom" />
-            </fieldset>
-
-            <fieldset>
-              <legend>
-                <label for="bedroom">Price</label>
-              </legend>
-              <input type="text" name="Bedroom" id="bedroom" />
-            </fieldset>
-
-            <fieldset>
-              <legend>
-                <label for="">Description</label>
-              </legend>
-              <textarea></textarea>
-            </fieldset>
-
-            <div class="buttons d-flex justify-content-end">
-              <button class="nextBtn nBtn1" type="button">Next</button>
+            <div class="radioBtn">
+              <input
+                type="radio"
+                name="classification"
+                id="r2"
+                checked
+                value="For Sale"
+              />
+              <label for="flexRadioDefault2"> For Rent </label>
             </div>
           </div>
-          <!-- 2ND FORM -->
-          <div class="form_group fg2">
-            <small> Step 2 of 3</small>
-            <p class="display-6">Upload Property Images</p>
-            <fieldset>
-              <legend>
-                <label for="">Choose File</label>
-              </legend>
-              <div class="mb-3">
-                <label for="formFile" class="form-label"
-                  >Default file input example</label
-                >
-                <input class="form-control" type="file" id="formFile" />
-              </div>
-            </fieldset>
-            <div class="buttons d-flex justify-content-end">
-              <button class="prevBtn pBtn2 me-2">Back</button>
-              <button class="nextBtn nBtn2 me-2" type="button">Next</button>
-              <button class="skipBtn" type="button">Skip</button>
+
+          <fieldset>
+            <legend>
+              <label for="">Select Category </label>
+            </legend>
+            <select class="form-select" aria-label="Default select example">
+              <option selected value="default">Select Category</option>
+              <option value="rent">Land</option>
+              <option value="rent">House</option>
+              <option value="rent">Apartment</option>
+              <option value="rent">Condominium</option>
+            </select>
+          </fieldset>
+
+          <div class="row area d-flex justify-content-center">
+            <div class="col-sm-12 col-xl-6">
+              <fieldset>
+                <legend>
+                  <label for="lotArea">Lot Area</label>
+                </legend>
+                <input type="text" name="Lot Area" id="lotArea" />
+              </fieldset>
+            </div>
+
+            <div class="col-sm-12 col-xl-6">
+              <fieldset>
+                <legend>
+                  <label for="floorArea">Floor Area</label>
+                </legend>
+                <input type="text" name="Floor Area" id="floorArea" />
+              </fieldset>
             </div>
           </div>
-          <!-- 3RD FORM -->
-          <div class="form_group fg3">
-            <small> Step 3 of 3</small>
-            <p class="display-6">User Information</p>
-            <fieldset>
-              <legend>
-                <label for="">Firstname</label>
-              </legend>
-              <input type="text" name="" id="" />
-            </fieldset>
 
-            <fieldset>
-              <legend>
-                <label for="">Lastname</label>
-              </legend>
-              <input type="text" name="" id="" />
-            </fieldset>
+          <div class="ameneties row d-flex justify-content-center">
+            <div class="col-sm-12 col-xl-4">
+              <fieldset>
+                <legend>
+                  <label for="bedroom">Bedroom</label>
+                </legend>
+                <input type="text" name="Bedroom" id="bedroom" />
+              </fieldset>
+            </div>
 
-            <fieldset>
-              <legend>
-                <label for="">Contact No.</label>
-              </legend>
-              <input type="text" name="" id="" />
-            </fieldset>
+            <div class="col-sm-12 col-xl-4">
+              <fieldset>
+                <legend>
+                  <label for="bathRoom">Bathroom</label>
+                </legend>
+                <input type="text" name="Bathroom" id="bathRoom" />
+              </fieldset>
+            </div>
 
-            <fieldset>
-              <legend>
-                <label for="">Email</label>
-              </legend>
-              <input type="text" name="" id="" />
-            </fieldset>
-
-            <div class="buttons d-flex justify-content-end">
-              <button class="prevBtn me-2 pBtn2" type="button">Back</button>
-              <button class="nextBtn" type="submit">Submit</button>
+            <div class="col-sm-12 col-xl-4">
+              <fieldset>
+                <legend>
+                  <label for="garage">Garage</label>
+                </legend>
+                <input type="text" name="Garage" id="garage" />
+              </fieldset>
             </div>
           </div>
-        </form>
-      </div>
-    
 
-    <footer class="mt-5">
+          <fieldset>
+            <legend>
+              <label for="bedroom">Address</label>
+            </legend>
+            <input type="text" name="Bedroom" id="bedroom" />
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <label for="bedroom">Price</label>
+            </legend>
+            <input type="text" name="Bedroom" id="bedroom" />
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <label for="">Description</label>
+            </legend>
+            <textarea></textarea>
+          </fieldset>
+
+          <div class="buttons d-flex justify-content-end">
+            <button class="nextBtn nBtn1" type="button">Next</button>
+          </div>
+        </div>
+        <!-- 2ND FORM -->
+        <div class="form_group fg2">
+          <small> Step 2 of 3</small>
+          <p class="display-6">Upload Property Images</p>
+          <fieldset>
+            <legend>
+              <label for="">Choose File</label>
+            </legend>
+            <div class="mb-3">
+              <label for="formFile" class="form-label"
+                >Default file input example</label
+              >
+              <input class="form-control" type="file" id="formFile" />
+            </div>
+          </fieldset>
+          <div class="buttons d-flex justify-content-end">
+            <button class="prevBtn pBtn2 me-2">Back</button>
+            <button class="nextBtn nBtn2 me-2" type="button">Next</button>
+            <button class="skipBtn" type="button">Skip</button>
+          </div>
+        </div>
+        <!-- 3RD FORM -->
+        <div class="form_group fg3">
+          <small> Step 3 of 3</small>
+          <p class="display-6">User Information</p>
+          <fieldset>
+            <legend>
+              <label for="">Firstname</label>
+            </legend>
+            <input type="text" name="" id="" />
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <label for="">Lastname</label>
+            </legend>
+            <input type="text" name="" id="" />
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <label for="">Contact No.</label>
+            </legend>
+            <input type="text" name="" id="" />
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <label for="">Email</label>
+            </legend>
+            <input type="text" name="" id="" />
+          </fieldset>
+
+          <div class="buttons d-flex justify-content-end">
+            <button class="prevBtn me-2 pBtn2" type="button">Back</button>
+            <button class="nextBtn" type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <footer>
       <div
         class="foot-links list-inline py-2 px-1 px-lg-5 text-center container-fluid"
       >
@@ -519,6 +517,16 @@
             <li class="nav-item">
               <a href="careers.html" class="nav-link"
                 ><i class="bi bi-chevron-right me-1"></i>Careers</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="ourteam.html" class="nav-link"
+                ><i class="bi bi-chevron-right me-1"></i>Our Team</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="partners.html" class="nav-link"
+                ><i class="bi bi-chevron-right me-1"></i>Partners</a
               >
             </li>
           </ul>
