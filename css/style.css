@@ -7,6 +7,7 @@
   --yellow: #fcd812;
   --white: #ffffff;
   --lightblue: #e3eafd;
+  --highlight: #ff725d;
 }
 
 * {
@@ -504,4 +505,14 @@ footer {
 .missionvision .bi,
 .missionvision li {
   color: var(--white);
+}
+
+.horizontal-line {
+  height: 5px;
+  background: var(--highlight);
+}
+
+.ourteam .broker-con img {
+  border-radius: 50%;
+  max-width: 80px;
 }/*# sourceMappingURL=style.css.map */
