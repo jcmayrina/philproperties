@@ -458,4 +458,50 @@ footer {
   position: absolute;
   right: 5;
   top: 10;
+}
+
+.card-img-overlay {
+  position: absolute;
+  bottom: 0;
+}
+
+.about a {
+  max-height: 35px;
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  border-radius: 10px;
+  background: var(--darkblue);
+  color: var(--white);
+}
+
+.about .fs-2 {
+  line-height: normal;
+}
+
+.about .bot-img {
+  margin-left: -20px;
+  max-width: 200px;
+}
+
+.about .fs-6 {
+  line-height: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .about .bot-img {
+    margin-left: 25%;
+    max-width: 250px;
+  }
+  .about .fs-6 {
+    line-height: 30px;
+  }
+}
+.missionvision {
+  background: var(--darkblue);
+}
+
+.missionvision .fs-2,
+.missionvision .fs-6,
+.missionvision .bi,
+.missionvision li {
+  color: var(--white);
 }/*# sourceMappingURL=style.css.map */
