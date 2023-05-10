@@ -4,6 +4,7 @@
 /* color: #fcd812 */
 :root {
   --darkblue: #131e3a;
+  --darklblue: #213569;
   --yellow: #fcd812;
   --white: #ffffff;
   --lightblue: #e3eafd;
@@ -209,6 +210,7 @@ footer {
 .dev-img {
   filter: brightness(0) opacity(0.7);
   height: 45%;
+  width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
 }
@@ -335,11 +337,11 @@ footer {
     display: none !important;
   }
   .latestprop .item,
-  .latestvid .item {
+.latestvid .item {
     padding: 0.3em;
   }
   .latestprop .owl-carousel,
-  .latestvid .owl-carousel {
+.latestvid .owl-carousel {
     max-width: 100%;
   }
 }
@@ -553,4 +555,38 @@ footer {
   color: var(--white);
   margin-left: -4%;
   z-index: 9;
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px rgb(63, 63, 63);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--darkblue);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--darklblue);
+}
+
+#modalCalculator .modal-body .col-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+  padding: 5px;
+}
+
+#modalCalculator .modal-body .btn {
+  background: var(--darkblue);
+  color: var(--white);
 }/*# sourceMappingURL=style.css.map */
