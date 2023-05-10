@@ -19,6 +19,7 @@ legend{
 }
 input[type="text"], textarea, select{
     border:none !important; 
+    outline: none;
 }
 .banner{
     z-index: -1;
@@ -83,9 +84,10 @@ button{
     color: white;
 }
 
-input:focus, input:active, textarea:focus{
-    outline:none;
+input:focus, input:active, textarea:focus, select:focus, select:active{
+    outline:none !important;
 }
+
 
 @media (min-width:1199px){
     .banner{

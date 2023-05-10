@@ -515,3 +515,15 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--darklblue);
 }
+#modalCalculator .modal-body .col-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+  padding: 5px;
+}
+
+#modalCalculator .modal-body .btn {
+  background: var(--darkblue);
+  color: var(--white);
+}
