@@ -64,6 +64,11 @@ select, textarea{
     border: none;
 }
 
+
+.ast::after{
+    content: " *";
+    color: red;
+}
 @media (min-width: 768px) and (max-width:1199px){
 
 .topFont p{
