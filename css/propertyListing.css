@@ -230,6 +230,8 @@ all: unset;
   width: 50px;
 }
 
+
+
 @media (max-width: 1199px) and (min-width: 992px) {
   .background {
     background-color: white;
