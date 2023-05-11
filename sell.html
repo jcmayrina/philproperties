@@ -320,7 +320,7 @@
     </div>
 
     <div class="form">
-      <form action="">
+      <form data-multi-step action="">
         <!-- 1st FORM -->
         <div class="form_group active fg1">
           <small> Step 1 of 3</small>
@@ -331,6 +331,7 @@
                 type="radio"
                 name="classification"
                 id="r1"
+                checked
                 value="For Sale"
               />
               <label for="flexRadioDefault1"> For Sale </label>
@@ -340,7 +341,6 @@
                 type="radio"
                 name="classification"
                 id="r2"
-                checked
                 value="For Sale"
               />
               <label for="flexRadioDefault2"> For Rent </label>
@@ -351,8 +351,8 @@
             <legend>
               <label for="">Select Category </label>
             </legend>
-            <select class="form-select" aria-label="Default select example">
-              <option selected value="default">Select Category</option>
+            <select class="form-select" aria-label="category" required>
+              <option value="">Select Category</option>
               <option value="rent">Land</option>
               <option value="rent">House</option>
               <option value="rent">Apartment</option>
@@ -366,7 +366,7 @@
                 <legend>
                   <label for="lotArea">Lot Area</label>
                 </legend>
-                <input type="text" name="Lot Area" id="lotArea" />
+                <input type="text" name="Lot Area" id="lotArea" required />
               </fieldset>
             </div>
 
@@ -375,7 +375,7 @@
                 <legend>
                   <label for="floorArea">Floor Area</label>
                 </legend>
-                <input type="text" name="Floor Area" id="floorArea" />
+                <input type="text" name="Floor Area" id="floorArea" required/>
               </fieldset>
             </div>
           </div>
@@ -386,7 +386,7 @@
                 <legend>
                   <label for="bedroom">Bedroom</label>
                 </legend>
-                <input type="text" name="Bedroom" id="bedroom" />
+                <input type="text" name="Bedroom" id="bedroom" required/>
               </fieldset>
             </div>
 
@@ -395,7 +395,7 @@
                 <legend>
                   <label for="bathRoom">Bathroom</label>
                 </legend>
-                <input type="text" name="Bathroom" id="bathRoom" />
+                <input type="text" name="Bathroom" id="bathRoom" required/>
               </fieldset>
             </div>
 
@@ -404,30 +404,30 @@
                 <legend>
                   <label for="garage">Garage</label>
                 </legend>
-                <input type="text" name="Garage" id="garage" />
+                <input type="text" name="Garage" id="garage" required/>
               </fieldset>
             </div>
           </div>
 
           <fieldset>
             <legend>
-              <label for="bedroom">Address</label>
+              <label for="address">Address</label>
             </legend>
-            <input type="text" name="Bedroom" id="bedroom" />
+            <input type="text" name="address" id="address" required/>
           </fieldset>
 
           <fieldset>
             <legend>
-              <label for="bedroom">Price</label>
+              <label for="price">Price</label>
             </legend>
-            <input type="text" name="Bedroom" id="bedroom" />
+            <input type="text" name="price" id="price" required/>
           </fieldset>
 
           <fieldset>
             <legend>
               <label for="">Description</label>
             </legend>
-            <textarea></textarea>
+            <textarea required></textarea>
           </fieldset>
 
           <div class="buttons d-flex justify-content-end">
@@ -450,7 +450,7 @@
             </div>
           </fieldset>
           <div class="buttons d-flex justify-content-end">
-            <button class="prevBtn pBtn2 me-2">Back</button>
+            <button class="prevBtn pBtn1 me-2" type="button">Back</button>
             <button class="nextBtn nBtn2 me-2" type="button">Next</button>
             <button class="skipBtn" type="button">Skip</button>
           </div>
@@ -463,28 +463,28 @@
             <legend>
               <label for="">Firstname</label>
             </legend>
-            <input type="text" name="" id="" />
+            <input type="text" name="" id="" required />
           </fieldset>
 
           <fieldset>
             <legend>
               <label for="">Lastname</label>
             </legend>
-            <input type="text" name="" id="" />
+            <input type="text" name="" id="" required/>
           </fieldset>
 
           <fieldset>
             <legend>
               <label for="">Contact No.</label>
             </legend>
-            <input type="text" name="" id="" />
+            <input type="text" name="" id="" required/>
           </fieldset>
 
           <fieldset>
             <legend>
               <label for="">Email</label>
             </legend>
-            <input type="text" name="" id="" />
+            <input type="text" name="" id="" required/>
           </fieldset>
 
           <div class="buttons d-flex justify-content-end">
@@ -494,7 +494,7 @@
         </div>
       </form>
     </div>
-    <footer>
+    <footer class="mt-5">
       <div
         class="foot-links list-inline py-2 px-1 px-lg-5 text-center container-fluid"
       >
