@@ -210,7 +210,6 @@ footer {
 .dev-img {
   filter: brightness(0) opacity(0.7);
   height: 45%;
-  width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
 }
@@ -337,11 +336,11 @@ footer {
     display: none !important;
   }
   .latestprop .item,
-.latestvid .item {
+  .latestvid .item {
     padding: 0.3em;
   }
   .latestprop .owl-carousel,
-.latestvid .owl-carousel {
+  .latestvid .owl-carousel {
     max-width: 100%;
   }
 }
