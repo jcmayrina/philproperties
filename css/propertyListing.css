@@ -3,6 +3,9 @@
 * {
   font-family: "Roboto", sans-serif;
 }
+body{
+  position: relative;
+}
 .font {
   font-size: 14px;
 }
@@ -233,15 +236,16 @@ all: unset;
   position: fixed;
   bottom: 0;
   right: 5px;
+  z-index: 9999;
 }
 .counter{
-  position: sticky;
   border: 2px #131e3a solid ;
   background-color: white;
   width: 50px;
   height: 50px;
   top: 0;
   display: none;
+  
   
  
 }
@@ -329,7 +333,7 @@ vertical-align: middle;
     height: 16px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 990px) {
   .background {
     background-color: white;
   }
