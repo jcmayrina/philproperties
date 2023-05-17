@@ -252,6 +252,11 @@ footer {
   display: flex;
   justify-content: center;
 }
+.latestprop .item .img-wrapper img,
+.latestvid .item .img-wrapper img {
+  object-fit: cover;
+  height: 180px;
+}
 .latestprop,
 .latestvid {
   display: flex;
