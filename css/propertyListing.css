@@ -206,9 +206,7 @@ a.rentBtn {
   float: right;
   filter: invert(100%) sepia(12%) saturate(7452%) hue-rotate(186deg) brightness(111%) contrast(111%);
 }
-a:hover{
-all: unset;
-}
+
 .title {
   margin: 0;
 }
@@ -273,6 +271,10 @@ vertical-align: middle;
 }
 .modal-body{
   overflow-x:scroll;
+}
+.remove-links-design{
+ text-decoration: none;
+ color: #131e3a;
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {
