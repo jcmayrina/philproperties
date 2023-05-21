@@ -7,21 +7,30 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(../images/article-view/articleview-bg.jpg);
-      background-repeat: no-repeat;
-      background-size: 100%;
+    background-image: url(../images/article-view/qa.jpg);
+      background-repeat:no-repeat;
+      
       opacity: 0.8;
       filter:alpha(opacity=40);
       height:100%;
       width:100%;
       background-color: #141F3D !important;
       background-blend-mode: multiply;
+  transform: skewY(5deg);
+
  }
 
  .post-container{
     max-width: 800px;
     margin: auto;
     width: 100%;
+ }
+ @media only screen and (max-width: 600px) {
+
+   #articleview_bg::before 
+   {
+      height: 500px;
+   }
  }
  .content-header{
     display: flex;
