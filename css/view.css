@@ -30,8 +30,12 @@
     margin-top: 4rem !important;
  }
 
- .container h1,ul,li,i{
+ .container h1,ul,li,i,hr{
     color: #FEFEFE;
+ }
+
+ .container hr{
+    width: 300px;
  }
 
  .wp-block-image{
@@ -51,3 +55,4 @@
     display: flex;
     position: relative;
  }
+
