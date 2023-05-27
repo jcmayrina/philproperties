@@ -1,9 +1,11 @@
 let idArray = JSON.parse(sessionStorage.getItem("ids"));
+
+
 console.log(idArray);
 for(var i = 0; i < idArray.length; i++){
     var table = '<tr class="rows">';
     let index = idArray[i];
-    table+="<td><button type='button' class='btn btn-danger first removeBtn' data-num="+i+">Remove</button></td>";
+    table+="<td><button type='button' class='btn btn-danger first removeBtn' data-num="+product_data[index].id+">Remove</button></td>";
     table+="<td><span>"+product_data[index].condtion+"</span></td>";
     table+="<td><span><img class='img-fluid object-fit-contain'src="+product_data[index].image+" width='100'></span></td>";
     table+="<td><span>"+product_data[index].category+"</span></td>";
@@ -21,14 +23,15 @@ for(var i = 0; i < idArray.length; i++){
     
   }
   $( "tbody" ).on( "click", ".removeBtn", function() {
-    console.log("Current idArray: " + idArray);
+    $(this).closest("tr").remove();
     let number = $(this).data("num");
     let index = idArray.indexOf(number);
     let x = idArray.splice(index, 1);
-    $(this).closest("tr").remove();
+    console.log("removed: " + x);
+    console.log("Current idArray: " + idArray);
+    
     sessionStorage.setItem("ids", JSON.stringify(idArray));
-    $(".number").text(idArray.length)
-    if(idArray.length == 0){
-      $(".counter").hide();
-    }
   });
+
+  
+ 
