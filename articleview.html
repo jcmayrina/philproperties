@@ -32,7 +32,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-xl m-0 p-0 shadow-lg bg-white">
+    <nav class="navbar navbar-expand-xl m-0 p-0 shadow-lg">
       <a class="navbar-brand d-xl-none d-inline ps-3" href="index.html"
         ><img src="./images/philproperties-logo.png" alt="logo"
       /></a>
@@ -249,8 +249,84 @@
           </li>
         </ul>
       </div>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="modalCalculator"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="modalCalculatorLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalCalculatorLabel">
+                Loan Calculator
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="ps-3 pb-3">
+                <form class="d-flex m-0 border-0 bg-white">
+                  <div class="col-3">
+                    <label for="int-rate ">Interest Rate</label>
+                    <select
+                      class="form-select border-1 p-0 m-0"
+                      name="int-rate"
+                      id="inputGroupSelect01"
+                    >
+                      <option value="any" selected>Any</option>
+                      <option value="commercial">Commercial</option>
+                      <option value="land">Land</option>
+                      <option value="townhouse">Townhouse</option>
+                      <option value="house">House & Lot</option>
+                      <option value="condominium">Condominium</option>
+                    </select>
+                  </div>
+                  <div class="col-3">
+                    <label for="years">Years</label>
+                    <select
+                      class="form-select border-1 p-0 m-0"
+                      name="years"
+                      id="inputGroupSelect01"
+                    >
+                      <option value="any" selected>Any</option>
+                      <option value="commercial">Commercial</option>
+                      <option value="land">Land</option>
+                      <option value="townhouse">Townhouse</option>
+                      <option value="house">House & Lot</option>
+                      <option value="condominium">Condominium</option>
+                    </select>
+                  </div>
+                  <div class="col-3">
+                    <label for="int-rate">Loan Amount</label>
+                    <input
+                      class="form-control p-0 m-0 border-1"
+                      name="loan"
+                      type="text"
+                      placeholder="Search for City, Neighborhood, or Developer"
+                      aria-label="Text input with dropdown button"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <button class="btn border-0 px-3 m-0 fs-6" type="submit">
+                      Compute
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
-
     
 
 
