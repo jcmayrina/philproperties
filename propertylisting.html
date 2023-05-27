@@ -314,74 +314,27 @@
       </div>
     </nav>
 
-    <div
-      class="modal fade"
-      id="comparison-page"
-      tabindex="-1"
-      aria-labelledby="comparisonModal"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="ModalLabel">
-              Comparative Analysis
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <table class="table text-center">
-              <thead>
-                <tr>
-                  <th scope="col">Action</th>
-                  <th scope="col">Condition</th>
-                  <th scope="col">Preview</th>
-                  <th scope="col">Category</th>
-                  <th scope="col">Address</th>
-                  <th scope="col">Floor Area</th>
-                  <th scope="col">Lot Area</th>
-                  <th scope="col">Bedroom</th>
-                  <th scope="col">Bathroom</th>
-                  <th scope="col">Garage</th>
-                  <th scope="col">Price</th>
-                </tr>
-              </thead>
-              <tbody class="row_info"></tbody>
-            </table>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary clearBtn">
-              Clear Selection
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="alert hide">
+      <span class="msg">You already selected this property!</span>
+   </div>
 
-    <div class="counter-container">
-      <div class="counter shadow rounded-circle">
-        <div class="close-button">
-          <span class="xbtn">x</span>
-        </div>
+    <div class="counter-container ">
+      <div class="counter rounded-top">
+        <div class="btn-grp d-flex">
+          <button class="btn btn-secondary btn-sm counter-btns hideBtn">
+            Hide
+          </button>
+          <button class=" btn btn-danger btn-sm counter-btns clearBtn">
+            Clear
+          </button>
+          <a class="btn btn-sm counter-btns compareBtn" href="./comparative.html" role="button">Compare</a>
+          </div>
         <div
           class="counter-number text-center"
-          data-bs-toggle="modal"
-          data-bs-target="#comparison-page"
         >
-          <span class="number"></span>
+          <span class="number">0</span>
         </div>
+      </a>
       </div>
     </div>
 

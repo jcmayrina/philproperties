@@ -1,50 +1,37 @@
 
 let ids = [];
 let z = 0;
-// $( "body" ).on( "click", function( event ) {
-//     let target = $(event.target);
-//     let check = target.hasClass("cmp");
-//     let check1 = target.hasClass("pressed")
-     
-//     if(!check)
-//     return
-//     $(".counter").show();
-//     if(check1)
-//     return;
-//     target.addClass("pressed");
-//     console.log("meh0 "+ids)
-//     $(".number").text(ids.length)
-//   });
 
-  $(".close-button").click(function(){
+
+  $(".hideBtn").click(function(){
     $(".counter").hide();
-    ids = [];
-    z=0;
-    console.log(ids);
-    $(".rows").remove();
   });
 
   $(".clearBtn").click(function(){
     ids = [];
+    sessionStorage.setItem("ids", JSON.stringify(ids));
     z=0;
     $(".rows").remove();
     $(".counter").hide();
   });
-    
-  
-
-
-  
   
 $(".cmp").click(function(){
   let pId = $(this).data("id");
   console.log("Current ids: " + ids);
   if(ids.includes(pId)){
-    console.log(pId);
+    $(".counter").show();
+    $('.alert').addClass("show");
+           $('.alert').removeClass("hide");
+           $('.alert').addClass("showAlert");
+           setTimeout(function(){
+             $('.alert').removeClass("show");
+             $('.alert').addClass("hide");
+           },2500);
+           
     return;
   }
-  
   ids.push(pId);
+  sessionStorage.setItem("ids", JSON.stringify(ids));
   console.log("pushed ids: " + ids);
   $(".counter").show();
   $(".number").text(ids.length)

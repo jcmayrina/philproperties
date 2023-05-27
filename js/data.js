@@ -10,6 +10,7 @@ let product_data = [{
     "bathroom":"4",
     "garage":"1",
     "price":"₱26,500,000",
+    "remarks":"",
   },
   {
     "id":1,
@@ -23,6 +24,7 @@ let product_data = [{
     "bathroom":"4",
     "garage":"1",
     "price":"₱6,500,000",
+    "remarks":"",
   },
   {
     "id":2,
@@ -36,6 +38,7 @@ let product_data = [{
     "bathroom":"3",
     "garage":"1",
     "price":"₱14,500,000",
+    "remarks":"",
   },
   {
     "id":3,
@@ -49,6 +52,7 @@ let product_data = [{
     "bathroom":"3",
     "garage":"1",
     "price":"₱2,500,000",
+    "remarks":"",
   },
   {
     "id":4,
@@ -62,6 +66,7 @@ let product_data = [{
     "bathroom":"4",
     "garage":"1",
     "price":"₱35,500,000",
+    "remarks":"",
   },
   {
     "id":5,
@@ -75,5 +80,6 @@ let product_data = [{
     "bathroom":"1",
     "garage":"-",
     "price":"₱6,500,000",
+    "remarks":"",
   }
 ];
