@@ -1,23 +1,25 @@
 #articleview_bg{z-index: 1;}
 #articleview_bg::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-image: url(../images/article-view/articleview-bg.jpg);
-    object-fit: fill;
-      background-repeat:no-repeat;
-      
-      opacity: 0.8;
-      filter:alpha(opacity=40);
-      height:100%;
-      width:100%;
-      background-color: #141F3D !important;
-      background-blend-mode: multiply;
-  transform: skewY(5deg);
+content: "";
+position: absolute;
+z-index: -1;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+height: 600px; /* Updated height to 500px */
+background-image: url(../images/article-view/articleview-bg.jpg);
+
+background-position: center; 
+background-size: 150%;
+object-fit: fill;
+background-repeat: no-repeat;
+opacity: 0.8;
+filter: alpha(opacity=40);
+width: 100%;
+background-color: #141F3D !important;
+background-blend-mode: multiply;
+transform: skewY(5deg);
 
  }
 
