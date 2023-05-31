@@ -30,6 +30,11 @@
   .close-button > .xbtn{
     color: white;
   }
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 
   @media print {
     .first{
